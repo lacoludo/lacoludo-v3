@@ -1,0 +1,53 @@
+@keyframes flyin {
+  from {
+    transform: translateY(-250px);
+  }
+  to {
+    transform: rotateX(12deg);
+  }
+}
+@keyframes lightwall {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  5%, 50% {
+    opacity: 1;
+    width: 100%;
+  }
+  100% {
+    opacity: 0;
+    width: 100%;
+  }
+}
+
+.tron {
+  background-size: 64px 64px;
+  perspective: 100;
+  position: relative;
+  transform-origin: center top;
+  animation: flyin 1600ms ease-in-out 300ms forwards;
+}
+
+.tron:before,
+.tron:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #fff;
+  height: 2px;
+  width: 200px;
+  transform: rotateX(-10deg);
+  opacity: 0;
+  top: 4px;
+  box-shadow: 0 -5px 15px #01D5DA;
+  animation: lightwall 5s ease-in 2000ms forwards;
+}
+
+.tron:after {
+  right: 0;
+  height: 2px;
+  top: 63px;
+  box-shadow: 0 -10px 50px 2px #01D5DA;
+  animation: lightwall 5s ease-in 3200ms;
+}
