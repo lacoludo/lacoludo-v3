@@ -1,18 +1,18 @@
 jQuery(document).ready(function($) {
     //open menu
-    $('.cd-menu-trigger').on('click', function(event) {
-        event.preventDefault();
-        $('#cd-main-content').addClass('move-out');
-        $('#main-nav').addClass('is-visible');
-        $('.cd-shadow-layer').addClass('is-visible');
-    });
+    // $('.cd-menu-trigger').on('click', function(event) {
+    //     event.preventDefault();
+    //     $('#cd-main-content').addClass('move-out');
+    //     $('#main-nav').addClass('is-visible');
+    //     $('.cd-shadow-layer').addClass('is-visible');
+    // });
     //close menu
-    $('.cd-close-menu').on('click', function(event) {
-        event.preventDefault();
-        $('#cd-main-content').removeClass('move-out');
-        $('#main-nav').removeClass('is-visible');
-        $('.cd-shadow-layer').removeClass('is-visible');
-    });
+    // $('.cd-close-menu').on('click', function(event) {
+    //     event.preventDefault();
+    //     $('#cd-main-content').removeClass('move-out');
+    //     $('#main-nav').removeClass('is-visible');
+    //     $('.cd-shadow-layer').removeClass('is-visible');
+    // });
 
     //clipped image - blur effect
     set_clip_property();

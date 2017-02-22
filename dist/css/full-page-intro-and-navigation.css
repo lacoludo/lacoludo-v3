@@ -1,4 +1,4 @@
-/* -------------------------------- 
+/* --------------------------------
 
 Primary style
 
@@ -165,7 +165,7 @@ Main components
     display: none;
 }
 
-#cd-logo {
+/*#cd-logo {
     position: absolute;
     left: 10px;
     top: 8px;
@@ -188,9 +188,9 @@ Main components
     #cd-logo {
         left: 60px;
     }
-}
+}*/
 
-.cd-menu-trigger {
+/*.cd-menu-trigger {
     display: inline-block;
     position: absolute;
     right: 0;
@@ -204,9 +204,9 @@ Main components
     font-size: 0.875rem;
 }
 
-.cd-menu-trigger span {
+.cd-menu-trigger span {*/
     /* hamburger icon */
-    position: relative;
+    /*position: relative;
     display: inline-block;
     width: 18px;
     height: 2px;
@@ -262,20 +262,20 @@ Main components
     .cd-menu-trigger {
         right: 60px;
     }
-}
+}*/
 
-#main-nav {
+/*#main-nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #eeecf5;
+    background: #eeecf5;*/
     /* Force Hardware Acceleration in WebKit */
-    -webkit-transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
+    /*-webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;*/
     /* we move this element off the canvas */
-    -webkit-transform: translateY(-100%);
+    /*-webkit-transform: translateY(-100%);
     -moz-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
     -o-transform: translateY(-100%);
@@ -328,18 +328,18 @@ Main components
 
 #main-nav li:last-child a {
     border-bottom: none;
-}
+}*/
 
-#main-nav .cd-close-menu {
+/*#main-nav .cd-close-menu {
     position: absolute;
     top: 0;
     right: 0;
     display: inline-block;
     width: 40px;
     height: 40px;
-    background-color: #d26c64;
+    background-color: #d26c64;*/
     /* image replacement */
-    overflow: hidden;
+    /*overflow: hidden;
     text-indent: 100%;
     white-space: nowrap;
 }
@@ -413,9 +413,9 @@ Main components
 
 .no-js #main-nav .cd-close-menu {
     display: none;
-}
+}*/
 
-.cd-shadow-layer {
+/*.cd-shadow-layer {
     position: fixed;
     top: 0;
     left: 0;
@@ -436,4 +436,4 @@ Main components
     -webkit-transition-delay: 0s;
     -moz-transition-delay: 0s;
     transition-delay: 0s;
-}
+}*/
