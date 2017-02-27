@@ -43,27 +43,26 @@
     <meta name="theme-color" content="#000">
 
     <!-- CSS library -->
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="css/reset-css/reset.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" /> -->
+    <!-- Normalize.css -->
+    <!-- <link rel="stylesheet" href="css/normalize.css/normalize.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" integrity="sha256-t2/7smZfgrST4FS1DT0bs/KotCM74XlcqZN5Vu7xlrw=" crossorigin="anonymous" /> -->
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css"> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" /> -->
-    <link rel="stylesheet" href="css/bootstrap/bootstrap-custom-modal.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/font-awesome/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" /> -->
 
     <!-- CSS personal -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/tron.css">
-    <!-- Reset -->
-    <link rel="stylesheet" href="css/reset.css">
-    <!-- Full Page Intro & Navigation -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- <link rel="stylesheet" href="css/tron.css"> -->
+    <!-- Full page intro & navigation -->
     <link rel="stylesheet" href="css/full-page-intro-and-navigation.css">
-
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/select-css.css" />
-    <link rel="stylesheet" type="text/css" href="css/demo.css" />
-    <link rel="stylesheet" type="text/css" href="css/component.css" />
-
+    <!-- Animated SVG hero slider -->
+    <link rel="stylesheet" href="css/animated-svg-hero-slider.css">
     <!-- ProgressBar.js : bar + circle -->
     <link rel="stylesheet" href="css/bar-circle.css">
 
@@ -90,68 +89,59 @@
 </head>
 
 <body>
-    <svg class="hidden">
-        <defs>
-            <symbol id="icon-arrow" viewBox="0 0 39 51.43">
-                <title>Arrow Left</title>
-                <polygon points="7 25.71 36 45.71 36 26.08 36 5.71 7 25.71" stroke-miterlimit="10" stroke-width="6"/><line x1="3" y1="5.71" x2="3" y2="45.71" fill="none" stroke-miterlimit="10" stroke-width="6"/>
-            </symbol>
-        </defs>
-    </svg>
-    <main id="cd-main-content">
-        <section id="cd-intro">
-            <div class="container">
-              <div class="pages">
-                  <div class="page page--current">
-                      <!-- intro page -->
-                      <header class="codrops-header">
-                          <div class="codrops-header__subbox">
-                              <div class="custom-select">
-                                  <select name="select" id="select-effect">
-        									<option value="effect-3" data-layers="3" data-colors="#01D5DA,#000,#01D5DA" selected>Triple Swoosh</option>
-        									<option value="effect-1" data-layers="1" data-colors="#01D5DA">Simple</option>
-        									<option value="effect-2" data-layers="2" data-colors="#01D5DA,#000">Duo Move</option>
-        									<option value="effect-4" data-layers="3" data-colors="#01D5DA,#000,#01D5DA">Content Move</option>
-        								</select>
-                              </div>
-                          </div>
-                      </header>
-                      <a class="pater" href="http://goo.gl/ws0zHr">
-                          <img class="pater__img" src="img/HackReactorLogo.svg" alt="Hack Reactor" />
-                          <div class="pater__text">
-                              <h2 class="pater__title">Your CS success starts here.</h2>
-                              <p class="pater__desc">Hack Reactor's 12-week immersive coding school is accepting applications for onsite and online courses. <strong>Apply now and become a software engineer.</strong></p>
-                          </div>
-                      </a>
-                  </div>
-                  <!-- /page -->
-                  <div class="page">
-                      <blockquote class="quote">
-                          <p>A good programmer is someone who always looks both ways before crossing a one-way street. </p>
-                          <footer>Doug Linder</footer>
-                      </blockquote>
-                  </div>
-              </div>
-              <!-- /pages -->
-              <nav class="pagenav">
-                  <button class="pagenav__button pagenav__button--top" aria-label="Navigate top"><svg class="icon icon--rtop"><use xlink:href="#icon-arrow"></use></svg></button>
-                  <button class="pagenav__button pagenav__button--left" aria-label="Navigate left"><svg class="icon"><use xlink:href="#icon-arrow"></use></svg></button>
-                  <button class="pagenav__button pagenav__button--right" aria-label="Navigate right"><svg class="icon icon--rright"><use xlink:href="#icon-arrow"></use></svg></button>
-                  <button class="pagenav__button pagenav__button--bottom" aria-label="Navigate bottom"><svg class="icon icon--rbottom"><use xlink:href="#icon-arrow"></use></svg></button>
-                  <button class="pagenav__button pagenav__button--cornertopleft" aria-label="Navigate top left"><svg class="icon icon--rtopleft"><use xlink:href="#icon-arrow"></use></svg></button>
-                  <button class="pagenav__button pagenav__button--cornertopright" aria-label="Navigate top right"><svg class="icon icon--rtopright"><use xlink:href="#icon-arrow"></use></svg></button>
-                  <button class="pagenav__button pagenav__button--cornerbottomleft" aria-label="Navigate bottom left"><svg class="icon icon--rbottomleft"><use xlink:href="#icon-arrow"></use></svg></button>
-                  <button class="pagenav__button pagenav__button--cornerbottomright" aria-label="Navigate bottom right"><svg class="icon icon--rbottomright"><use xlink:href="#icon-arrow"></use></svg></button>
-              </nav>
+    <main id="cd-main-content" class="cd-slider-wrapper">
+        <ul class="cd-slider">
+            <li class="visible">
+                <section id="cd-intro">
+                    <h1>Hello, good morning !</h1>
+                </section>
+            </li>
+            <li>
+                <div>
+                    <h2>Slide #2 Title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                    <a href="http://codyhouse.co/?p=854" class="cd-btn">Learn more</a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h2>Slide #3 Title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, distinctio!.</p>
+                    <a href="http://codyhouse.co/?p=854" class="cd-btn">Learn more</a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h2>Slide #4 Title</h2>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <a href="http://codyhouse.co/?p=854" class="cd-btn">Learn more</a>
+                </div>
+            </li>
+        </ul>
+
+        <header class="cd-header">
+            <ol class="cd-slider-navigation">
+                <li class="selected"><a href="#0"><em>Item 1</em></a></li>
+                <li><a href="#0"><em>Item 2</em></a></li>
+                <li><a href="#0"><em>Item 3</em></a></li>
+                <li><a href="#0"><em>Item 4</em></a></li>
+            </ol>
+        </header>
+        <div class="cd-blurred-bg"></div>
+
+        <div class="cd-svg-cover" data-step1="M1402,800h-2V0.6c0-0.3,0-0.3,0-0.6h2v294V800z" data-step2="M1400,800H383L770.7,0.6c0.2-0.3,0.5-0.6,0.9-0.6H1400v294V800z" data-step3="M1400,800H0V0.6C0,0.4,0,0.3,0,0h1400v294V800z" data-step4="M615,800H0V0.6C0,0.4,0,0.3,0,0h615L393,312L615,800z"
+            data-step5="M0,800h-2V0.6C-2,0.4-2,0.3-2,0h2v312V800z" data-step6="M-2,800h2L0,0.6C0,0.3,0,0.3,0,0l-2,0v294V800z" data-step7="M0,800h1017L629.3,0.6c-0.2-0.3-0.5-0.6-0.9-0.6L0,0l0,294L0,800z" data-step8="M0,800h1400V0.6c0-0.2,0-0.3,0-0.6L0,0l0,294L0,800z"
+            data-step9="M785,800h615V0.6c0-0.2,0-0.3,0-0.6L785,0l222,312L785,800z" data-step10="M1400,800h2V0.6c0-0.2,0-0.3,0-0.6l-2,0v312V800z">
+            <svg height='100%' width="100%" preserveAspectRatio="none" viewBox="0 0 1400 800">
+    			<title>SVG cover layer</title>
+    			<desc>an animated layer to switch from one slide to the next one</desc>
+    			<path id="cd-changing-path" d="M1402,800h-2V0.6c0-0.3,0-0.3,0-0.6h2v294V800z"/>
+    		</svg>
             </div>
-            <header class="cd-header"></header>
-            <div class="cd-blurred-bg"></div>
-        </section>
-    </main>
-
-    <main>
 
     </main>
+
+    <div class="cd-shadow-layer"></div>
 
     <!-- Sections -->
     <div class="pattern">
@@ -495,122 +485,25 @@
 
     <!-- JS library -->
     <!-- jQuery -->
-    <script type="text/javascript" src="js/jquery/jquery-2.1.0.min.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery/jquery-2.1.0.min.js"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js" integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0=" crossorigin="anonymous"></script> -->
+    <script type="text/javascript" src="js/jquery/jquery-3.1.1.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script> -->
     <!-- Bootstrap -->
     <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script> -->
-    <!-- <script type="text/javascript" src="js/bootstrap/bootstrap-custom-modal.js"></script> -->
-    <!-- <script>
-        $(document).ready(function() {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script> -->
+    <!-- Snap.svg -->
+    <script type="text/javascript" src="js/snap.svg/snap.svg-min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js" integrity="sha256-oI+elz+sIm+jpn8F/qEspKoKveTc5uKeFHNNVexe6d8=" crossorigin="anonymous"></script> -->
     <!-- ProgressBar.js -->
     <script type="text/javascript" src="js/progressbar.js/progressbar.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js" integrity="sha256-VupM2GVVXK2c3Smq5LxXjUHBZveWTs35hu1al6ss6kk=" crossorigin="anonymous"></script> -->
 
     <!-- JS personal -->
-    <!-- Full Page Intro & Navigation -->
+    <!-- Full page intro & navigation -->
     <script type="text/javascript" src="js/full-page-intro-and-navigation.js"></script>
-
-    <script src="js/classie.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-        (function() {
-            var pages = [].slice.call(document.querySelectorAll('.pages > .page')),
-                currentPage = 0,
-
-                revealerOpts = {
-                    // the layers are the elements that move from the sides
-                    nmbLayers: 3,
-                    // bg color of each layer
-                    bgcolor: ['#01D5DA', '#000', '#01D5DA'],
-                    // effect classname
-                    effect: 'anim--effect-3',
-                    onStart: function(direction) {
-                        // next page gets class page--animate-[direction]
-                        var nextPage = pages[currentPage === 0 ? 1 : 0];
-                        classie.add(nextPage, 'page--animate-' + direction);
-                    },
-                    onEnd: function(direction) {
-                        // remove class page--animate-[direction] from next page
-                        var nextPage = pages[currentPage === 0 ? 1 : 0];
-                        nextPage.className = 'page';
-                    }
-                };
-            revealer = new Revealer(revealerOpts);
-
-            // clicking the page nav buttons
-            document.querySelector('button.pagenav__button--top').addEventListener('click', function() {
-                reveal('top');
-            });
-            document.querySelector('button.pagenav__button--left').addEventListener('click', function() {
-                reveal('left');
-            });
-            document.querySelector('button.pagenav__button--right').addEventListener('click', function() {
-                reveal('right');
-            });
-            document.querySelector('button.pagenav__button--bottom').addEventListener('click', function() {
-                reveal('bottom');
-            });
-            document.querySelector('button.pagenav__button--cornertopleft').addEventListener('click', function() {
-                reveal('cornertopleft');
-            });
-            document.querySelector('button.pagenav__button--cornertopright').addEventListener('click', function() {
-                reveal('cornertopright');
-            });
-            document.querySelector('button.pagenav__button--cornerbottomleft').addEventListener('click', function() {
-                reveal('cornerbottomleft');
-            });
-            document.querySelector('button.pagenav__button--cornerbottomright').addEventListener('click', function() {
-                reveal('cornerbottomright');
-            });
-
-            // triggers the effect by calling instance.reveal(direction, callbackTime, callbackFn)
-            function reveal(direction) {
-                var callbackTime = 750,
-                    callbackFn = function() {
-                        classie.remove(pages[currentPage], 'page--current');
-                        currentPage = currentPage === 0 ? 1 : 0;
-                        classie.add(pages[currentPage], 'page--current');
-                    };
-
-                revealer.reveal(direction, callbackTime, callbackFn);
-            }
-
-            // changing the effect..
-            var effectCtrl = document.getElementById('select-effect');
-            effectCtrl.addEventListener('change', changeEffect);
-            // force it to be the first opt as default
-            effectCtrl.value = 'effect-3';
-
-            function changeEffect() {
-                revealer.destroy();
-                var revealerOpts = {
-                    // the layers are the elements that move from the sides
-                    nmbLayers: Number(this.options[this.selectedIndex].getAttribute('data-layers')),
-                    // bg color of each layer
-                    bgcolor: this.options[this.selectedIndex].getAttribute('data-colors').split(','),
-                    // effect classname
-                    effect: 'anim--' + this.value,
-                    onStart: function(direction) {
-                        // next page gets class page--animate-[direction]
-                        var nextPage = pages[currentPage === 0 ? 1 : 0];
-                        classie.add(nextPage, 'page--animate-' + direction);
-                    },
-                    onEnd: function(direction) {
-                        // remove class page--animate-[direction] from next page
-                        var nextPage = pages[currentPage === 0 ? 1 : 0];
-                        nextPage.className = 'page';
-                    }
-                };
-
-                revealer = new Revealer(revealerOpts);
-            }
-        })();
-    </script>
-
+    <!-- Animated SVG hero slider -->
+    <script type="text/javascript" src="js/animated-svg-hero-slider.js"></script>
     <!-- ProgressBar.js : bar + circle -->
     <script type="text/javascript" src="js/bar-circle.js"></script>
 </body>
