@@ -7,7 +7,6 @@ body {
 
 .cd-header {
   position: absolute;
-  bottom: 0;
   left: 0;
   width: 100%;
   height: 50px;
@@ -20,6 +19,16 @@ body {
 @media only screen and (min-width: 768px) {
   .cd-header {
     height: 80px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .cd-header {
+    bottom: 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .cd-header {
+    top: 0;
   }
 }
 
