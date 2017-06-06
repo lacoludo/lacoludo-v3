@@ -1,0 +1,16 @@
+{
+  "name": "lacouture-ludovic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://lacoludo@bitbucket.org/lacoludo/lacouture-ludovic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/lacoludo/lacouture-ludovic#readme"
+}
