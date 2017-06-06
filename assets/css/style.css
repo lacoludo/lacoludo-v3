@@ -46,7 +46,7 @@ Navigation
   height: 100%;
   width: -webkit-calc(100% - 4px);
   width: calc(100% - 4px);
-  background-color: #131519;
+  background-color: #060606;
 }
 .cd-side-navigation ul {
   height: 100%;
@@ -93,7 +93,7 @@ Navigation
   right: -4px;
   height: 100%;
   width: 4px;
-  background-color: #83b0b9;
+  background-color: #01d5da;
   opacity: 0;
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
@@ -101,14 +101,14 @@ Navigation
   pointer-events: none;
 }
 .no-touch .cd-side-navigation a:hover {
-  background-color: #08090b;
+  background-color: #001515;
 }
 .no-touch .cd-side-navigation a:hover::after {
   opacity: 1;
 }
 .cd-side-navigation a.selected, .no-touch .cd-side-navigation a.selected:hover {
-  background-color: #01d5da;
-  color: #fff;
+  background-color: #000000;
+  color: #01d5da;
 }
 .cd-side-navigation a.selected > svg *, .no-touch .cd-side-navigation a.selected:hover > svg * {
   stroke: #01d5da;
@@ -212,17 +212,26 @@ Navigation
   position: relative;
   height: 100vh;
   width: 100%;
-  background: #83b0b9;
+  background: #000;
   overflow: hidden;
 }
-.cd-section.services header {
-  background-color: #d35657;
+.cd-section.experience header {
+  background-color: #000;
 }
-.cd-section.projects header {
-  background-color: #343943;
+.cd-section.education header {
+  background-color: #000;
 }
-.cd-section.contact header {
-  background-color: #e4b162;
+.cd-section.volunteer-experience header {
+  background-color: #000;
+}
+.cd-section.featured-skills header {
+  background-color: #000;
+}
+.cd-section.accomplishments header {
+  background-color: #000;
+}
+.cd-section.interests header {
+  background-color: #000;
 }
 .cd-section .cd-scroll {
   /* this is the arrow at the bottom of the header */
@@ -428,16 +437,25 @@ Navigation
   transform: translateZ(0);
 }
 #cd-loading-bar.index {
-  background-color: #83b0b9;
+  background-color: #01d5da;
 }
-#cd-loading-bar.services {
-  background-color: #d35657;
+#cd-loading-bar.experience {
+  background-color: #01d5da;
 }
-#cd-loading-bar.projects {
-  background-color: #343943;
+#cd-loading-bar.education {
+  background-color: #01d5da;
 }
-#cd-loading-bar.contact {
-  background-color: #e4b162;
+#cd-loading-bar.volunteer-experience {
+  background-color: #01d5da;
+}
+#cd-loading-bar.featured-skills {
+  background-color: #01d5da;
+}
+#cd-loading-bar.accomplishments {
+  background-color: #01d5da;
+}
+#cd-loading-bar.interests {
+  background-color: #01d5da;
 }
 #cd-loading-bar.loading {
   visibility: visible;
