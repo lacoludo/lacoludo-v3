@@ -374,6 +374,7 @@ Navigation
   font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 .cd-title span {
   opacity: 0.6;
