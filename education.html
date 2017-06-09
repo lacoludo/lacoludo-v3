@@ -1,5 +1,4 @@
 <!doctype html>
-<html lang="en" class="no-js">
 <!--
   ██▓    ▄▄▄       ▄████▄   ▒█████   ██▓     █    ██ ▓█████▄  ▒█████
   ▓██▒   ▒████▄    ▒██▀ ▀█  ▒██▒  ██▒▓██▒     ██  ▓██▒▒██▀ ██▌▒██▒  ██▒
@@ -12,11 +11,12 @@
      ░  ░     ░  ░░ ░          ░ ░      ░  ░   ░        ░        ░ ░
                   ░                                   ░
 -->
+<html lang="en" class="no-js">
 
 <head>
 
   <!-- META -->
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="description" content="The front-end developer from the future">
   <meta name="keywords" content="LACOUTURE,Ludovic,Developer,Front-end,HTML,CSS,JS,PHP">
   <meta name="author" content="LACOUTURE Ludovic">
@@ -88,10 +88,41 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
   <!-- END : SIMPLE LINE ICONS -->
 
+  <!-- DEVICON -->
+  <!-- <link rel="stylesheet" href="assets/node_modules/devicon/devicon.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <!-- END : DEVICON -->
+
   <!-- GOOGLE FONTS -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo">
   <!-- END : GOOGLE FONTS -->
+
+  <!-- JQUERY -->
+  <!-- <script src="assets/node_modules/jquery/dist/jquery.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <!-- END : JQUERY -->
+
+  <!-- BOOTSTRAP -->
+  <!-- <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script> -->
+  <!-- END : BOOTSTRAP -->
+
+  <!-- PROGRESSBAR.JS -->
+  <!-- <script src="assets/node_modules/progressbar.js/dist/progressbar.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js" integrity="sha256-VupM2GVVXK2c3Smq5LxXjUHBZveWTs35hu1al6ss6kk=" crossorigin="anonymous"></script>
+  <!-- END : PROGRESSBAR.JS -->
+
+  <!-- VELOCITY -->
+  <!-- <script src="assets/node_modules/velocity-animate/velocity.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js" integrity="sha256-/IeNFU9g1Tnj9pOKq3jGgIU2/kiKS+t1Q7pwym7mpoA=" crossorigin="anonymous"></script>
+  <!-- END : VELOCITY -->
+
+  <!-- LACOLUDO JS -->
+  <script src="assets/js/bar.js"></script>
+  <script src="assets/js/circle.js"></script>
+  <script src="assets/js/main.js"></script>
+  <!-- END : LACOLUDO JS -->
 
 </head>
 
@@ -148,77 +179,63 @@
           Interests
         </a>
       </li>
-		</ul>
+    </ul>
 	</nav>
   <!-- END : SIDE NAVIGATION -->
 
 	<!-- MAIN -->
   <main class="cd-main">
     <section class="cd-section education visible">
+
+      <!-- HEADER -->
       <header>
         <div class="cd-title">
           <h2>Education</h2>
         </div>
-
         <a href="#education-content" class="cd-scroll">Scroll Down</a>
       </header>
+      <!-- END : HEADER -->
 
+      <!-- CONTENT -->
       <div class="cd-content" id="education-content">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae illo veritatis ea deserunt aliquam blanditiis, voluptas optio, voluptate ut accusamus veniam numquam, porro! Cum minima a molestiae, similique voluptate, perferendis vel iusto quam suscipit
-          delectus dolore ducimus possimus illo molestias voluptas labore optio consequuntur sapiente pariatur libero nam temporibus. Laudantium!
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae illo veritatis ea deserunt aliquam blanditiis, voluptas optio, voluptate ut accusamus veniam numquam, porro! Cum minima a molestiae, similique voluptate, perferendis vel iusto quam suscipit
-          delectus dolore ducimus possimus illo molestias voluptas labore optio consequuntur sapiente pariatur libero nam temporibus. Laudantium!
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae illo veritatis ea deserunt aliquam blanditiis, voluptas optio, voluptate ut accusamus veniam numquam, porro! Cum minima a molestiae, similique voluptate, perferendis vel iusto quam suscipit
-          delectus dolore ducimus possimus illo molestias voluptas labore optio consequuntur sapiente pariatur libero nam temporibus. Laudantium!
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae illo veritatis ea deserunt aliquam blanditiis, voluptas optio, voluptate ut accusamus veniam numquam, porro! Cum minima a molestiae, similique voluptate, perferendis vel iusto quam suscipit
-          delectus dolore ducimus possimus illo molestias voluptas labore optio consequuntur sapiente pariatur libero nam temporibus. Laudantium!
-        </p>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col">
+              <h3 class="hideonsmall">2011<i class="fa fa-angle-double-right" aria-hidden="true"></i>2013</h3>
+              <div class="hideonsmall col-centered">
+                <div class="col-sm-12">
+                  <div id="bac" class="circle"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <h3 class="hideonsmall">2013<i class="fa fa-angle-double-right" aria-hidden="true"></i>2015</h3>
+              <div class="hideonsmall col-centered">
+                <div class="col-sm-12">
+                  <div id="dut" class="circle"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <h3 class="hideonsmall">2015<i class="fa fa-angle-double-right" aria-hidden="true"></i>2018</h3>
+              <div class="hideonsmall col-centered">
+                <div class="col-sm-12">
+                  <div id="mas" class="circle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- .cd-content -->
+      <!-- END : CONTENT -->
+
     </section>
-    <!-- .cd-section -->
   </main>
-  <!-- .cd-main -->
+  <!-- END : MAIN -->
 
 	<!-- LATERAL LOADING BAR -->
   <div id="cd-loading-bar" data-scale="1" class="index"></div>
   <!-- END : LATERAL LOADING BAR -->
-
-	<!-- JQUERY -->
-  <!-- <script src="assets/node_modules/jquery/dist/jquery.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <!-- END : JQUERY -->
-
-  <!-- BOOTSTRAP -->
-  <!-- <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script> -->
-  <!-- END : BOOTSTRAP -->
-
-  <!-- PROGRESSBAR.JS -->
-  <!-- <script src="assets/node_modules/progressbar.js/dist/progressbar.min.js"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js" integrity="sha256-VupM2GVVXK2c3Smq5LxXjUHBZveWTs35hu1al6ss6kk=" crossorigin="anonymous"></script> -->
-  <!-- END : PROGRESSBAR.JS -->
-
-  <!-- VELOCITY -->
-  <!-- <script src="assets/node_modules/velocity-animate/velocity.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js" integrity="sha256-/IeNFU9g1Tnj9pOKq3jGgIU2/kiKS+t1Q7pwym7mpoA=" crossorigin="anonymous"></script>
-  <!-- END : VELOCITY -->
-
-  <!-- LACOLUDO JS -->
-  <!-- <script src="assets/js/bar.js"></script> -->
-  <!-- <script src="assets/js/circle.js"></script> -->
-  <script src="assets/js/main.js"></script>
-  <!-- END : LACOLUDO JS -->
 
 </body>
 

@@ -1,172 +1,107 @@
-3// progressbar.js@1.0.0 version is used
+// progressbar.js@1.0.0 version is used
 // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
 
-var bar = new ProgressBar.Circle(bac, {
-  color: '#7d7c7b',
-  // This has to be the same size as the maximum width to
-  // prevent clipping
-  strokeWidth: 8,
-  trailWidth: 8,
-  easing: 'easeInOut',
-  duration: 3000,
-  text: {
-    autoStyleContainer: false
-  },
-  from: { color: '#7d7c7b', width: 8 },
-  to: { color: '#01D5DA', width: 8 },
-  // Set default step function for all animate calls
-  step: function(state, circle) {
-    circle.path.setAttribute('stroke', state.color);
-    circle.path.setAttribute('stroke-width', state.width);
+function showCircles() {
+  var bar = new ProgressBar.Circle("#bac", {
+    color: '#7d7c7b',
+    // This has to be the same size as the maximum width to
+    // prevent clipping
+    strokeWidth: 8,
+    trailWidth: 8,
+    easing: 'easeInOut',
+    duration: 3000,
+    text: {
+      autoStyleContainer: false
+    },
+    from: {
+      color: '#7d7c7b',
+      width: 8
+    },
+    to: {
+      color: '#01D5DA',
+      width: 8
+    },
+    // Set default step function for all animate calls
+    step: function(state, circle) {
+      circle.path.setAttribute('stroke', state.color);
+      circle.path.setAttribute('stroke-width', state.width);
 
-    var value = Math.round(circle.value() * 100);
-    if (value === 0) {
-      circle.setText('<b>BAC STG</b><br>LFP (INDE)');
+      var value = Math.round(circle.value() * 100);
+      if (value === 0) {
+        circle.setText('<b>BAC STG</b><br>LFP (INDE)');
+      }
     }
-  }
-});
-bar.text.style.fontSize = '2rem';
+  });
+  bar.text.style.fontSize = '2rem';
 
-bar.animate(1.0);  // Number from 0.0 to 1.0
+  bar.animate(1.0); // Number from 0.0 to 1.0
 
-var bar = new ProgressBar.Circle(dut, {
-  color: '#7d7c7b',
-  // This has to be the same size as the maximum width to
-  // prevent clipping
-  strokeWidth: 8,
-  trailWidth: 8,
-  easing: 'easeInOut',
-  duration: 3000,
-  text: {
-    autoStyleContainer: false
-  },
-  from: { color: '#7d7c7b', width: 8 },
-  to: { color: '#01D5DA', width: 8 },
-  // Set default step function for all animate calls
-  step: function(state, circle) {
-    circle.path.setAttribute('stroke', state.color);
-    circle.path.setAttribute('stroke-width', state.width);
+  var bar = new ProgressBar.Circle("#dut", {
+    color: '#7d7c7b',
+    // This has to be the same size as the maximum width to
+    // prevent clipping
+    strokeWidth: 8,
+    trailWidth: 8,
+    easing: 'easeInOut',
+    duration: 3000,
+    text: {
+      autoStyleContainer: false
+    },
+    from: {
+      color: '#7d7c7b',
+      width: 8
+    },
+    to: {
+      color: '#01D5DA',
+      width: 8
+    },
+    // Set default step function for all animate calls
+    step: function(state, circle) {
+      circle.path.setAttribute('stroke', state.color);
+      circle.path.setAttribute('stroke-width', state.width);
 
-    var value = Math.round(circle.value() * 100);
-    if (value === 0) {
-      circle.setText('<b>DUT GLT</b><br>IUT D\'ÉVRY');
+      var value = Math.round(circle.value() * 100);
+      if (value === 0) {
+        circle.setText('<b>DUT GLT</b><br>IUT D\'ÉVRY');
+      }
     }
-  }
-});
-bar.text.style.fontSize = '2rem';
+  });
+  bar.text.style.fontSize = '2rem';
 
-bar.animate(1.0);  // Number from 0.0 to 1.0
+  bar.animate(1.0); // Number from 0.0 to 1.0
 
-var bar = new ProgressBar.Circle(mas, {
-  color: '#7d7c7b',
-  trailColor: '#7d7c7b',
-  // This has to be the same size as the maximum width to
-  // prevent clipping
-  strokeWidth: 8,
-  trailWidth: 8,
-  easing: 'easeInOut',
-  duration: 3000,
-  text: {
-    autoStyleContainer: false
-  },
-  from: { color: '#01D5DA', width: 8 },
-  to: { color: '#01D5DA', width: 8 },
-  // Set default step function for all animate calls
-  step: function(state, circle) {
-    circle.path.setAttribute('stroke', state.color);
-    circle.path.setAttribute('stroke-width', state.width);
+  var bar = new ProgressBar.Circle("#mas", {
+    color: '#7d7c7b',
+    trailColor: '#7d7c7b',
+    // This has to be the same size as the maximum width to
+    // prevent clipping
+    strokeWidth: 8,
+    trailWidth: 8,
+    easing: 'easeInOut',
+    duration: 3000,
+    text: {
+      autoStyleContainer: false
+    },
+    from: {
+      color: '#01D5DA',
+      width: 8
+    },
+    to: {
+      color: '#01D5DA',
+      width: 8
+    },
+    // Set default step function for all animate calls
+    step: function(state, circle) {
+      circle.path.setAttribute('stroke', state.color);
+      circle.path.setAttribute('stroke-width', state.width);
 
-    var value = Math.round(circle.value() * 100);
-    if (value === 0) {
-      circle.setText('<b>MASTÈRE DEV</b><br>ECV DIGITAL');
+      var value = Math.round(circle.value() * 100);
+      if (value === 0) {
+        circle.setText('<b>MASTÈRE DEV</b><br>ECV DIGITAL');
+      }
     }
-  }
-});
-bar.text.style.fontSize = '2rem';
+  });
+  bar.text.style.fontSize = '2rem';
 
-bar.animate(0.3);  // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Circle(bacsmall, {
-  color: '#7d7c7b',
-  // This has to be the same size as the maximum width to
-  // prevent clipping
-  strokeWidth: 8,
-  trailWidth: 8,
-  easing: 'easeInOut',
-  duration: 3000,
-  text: {
-    autoStyleContainer: false
-  },
-  from: { color: '#7d7c7b', width: 8 },
-  to: { color: '#01D5DA', width: 8 },
-  // Set default step function for all animate calls
-  step: function(state, circle) {
-    circle.path.setAttribute('stroke', state.color);
-    circle.path.setAttribute('stroke-width', state.width);
-
-    var value = Math.round(circle.value() * 100);
-    if (value === 0) {
-      circle.setText('<b>BAC STG</b><br>LFP (INDE)');
-    }
-  }
-});
-bar.text.style.fontSize = '2rem';
-
-bar.animate(1.0);  // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Circle(dutsmall, {
-  color: '#7d7c7b',
-  // This has to be the same size as the maximum width to
-  // prevent clipping
-  strokeWidth: 8,
-  trailWidth: 8,
-  easing: 'easeInOut',
-  duration: 3000,
-  text: {
-    autoStyleContainer: false
-  },
-  from: { color: '#7d7c7b', width: 8 },
-  to: { color: '#01D5DA', width: 8 },
-  // Set default step function for all animate calls
-  step: function(state, circle) {
-    circle.path.setAttribute('stroke', state.color);
-    circle.path.setAttribute('stroke-width', state.width);
-
-    var value = Math.round(circle.value() * 100);
-    if (value === 0) {
-      circle.setText('<b>DUT GLT</b><br>IUT D\'ÉVRY');
-    }
-  }
-});
-bar.text.style.fontSize = '2rem';
-
-bar.animate(1.0);  // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Circle(massmall, {
-  color: '#7d7c7b',
-  trailColor: '#7d7c7b',
-  // This has to be the same size as the maximum width to
-  // prevent clipping
-  strokeWidth: 8,
-  trailWidth: 8,
-  easing: 'easeInOut',
-  duration: 3000,
-  text: {
-    autoStyleContainer: false
-  },
-  from: { color: '#01D5DA', width: 8 },
-  to: { color: '#01D5DA', width: 8 },
-  // Set default step function for all animate calls
-  step: function(state, circle) {
-    circle.path.setAttribute('stroke', state.color);
-    circle.path.setAttribute('stroke-width', state.width);
-
-    var value = Math.round(circle.value() * 100);
-    if (value === 0) {
-      circle.setText('<b>MASTÈRE DEV</b><br>ECV DIGITAL');
-    }
-  }
-});
-bar.text.style.fontSize = '2rem';
-
-bar.animate(0.3);  // Number from 0.0 to 1.0
+  bar.animate(0.3); // Number from 0.0 to 1.0
+};

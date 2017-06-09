@@ -18,5 +18,8 @@
     "velocity-animate": "^1.5.0",
     "reset-css": "^2.2.0",
     "simple-line-icons": "^2.4.1"
+  },
+  "dependencies": {
+    "devicon": "^2.0.0"
   }
 }

@@ -1,4 +1,16 @@
+function launchAnimations(){
+  if (window.location.href.endsWith("education.html")) {
+    showCircles();
+  }
+  else if (window.location.href.endsWith("featured-skills.html")) {
+    showBars();
+  }
+}
+
 jQuery(document).ready(function($) {
+
+  launchAnimations();
+
   //set some variables
   var isAnimating = false,
     firstLoad = false,
@@ -111,6 +123,9 @@ jQuery(document).ready(function($) {
               path: url
             }, '', url);
           }
+
+          launchAnimations();
+
         });
       });
 

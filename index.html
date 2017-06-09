@@ -1,5 +1,4 @@
 <!doctype html>
-<html lang="en" class="no-js">
 <!--
   ██▓    ▄▄▄       ▄████▄   ▒█████   ██▓     █    ██ ▓█████▄  ▒█████
   ▓██▒   ▒████▄    ▒██▀ ▀█  ▒██▒  ██▒▓██▒     ██  ▓██▒▒██▀ ██▌▒██▒  ██▒
@@ -12,11 +11,12 @@
      ░  ░     ░  ░░ ░          ░ ░      ░  ░   ░        ░        ░ ░
                   ░                                   ░
 -->
+<html lang="en" class="no-js">
 
 <head>
 
   <!-- META -->
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="description" content="The front-end developer from the future">
   <meta name="keywords" content="LACOUTURE,Ludovic,Developer,Front-end,HTML,CSS,JS,PHP">
   <meta name="author" content="LACOUTURE Ludovic">
@@ -88,10 +88,41 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
   <!-- END : SIMPLE LINE ICONS -->
 
+  <!-- DEVICON -->
+  <!-- <link rel="stylesheet" href="assets/node_modules/devicon/devicon.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <!-- END : DEVICON -->
+
   <!-- GOOGLE FONTS -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo">
   <!-- END : GOOGLE FONTS -->
+
+  <!-- JQUERY -->
+  <!-- <script src="assets/node_modules/jquery/dist/jquery.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <!-- END : JQUERY -->
+
+  <!-- BOOTSTRAP -->
+  <!-- <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script> -->
+  <!-- END : BOOTSTRAP -->
+
+  <!-- PROGRESSBAR.JS -->
+  <!-- <script src="assets/node_modules/progressbar.js/dist/progressbar.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js" integrity="sha256-VupM2GVVXK2c3Smq5LxXjUHBZveWTs35hu1al6ss6kk=" crossorigin="anonymous"></script>
+  <!-- END : PROGRESSBAR.JS -->
+
+  <!-- VELOCITY -->
+  <!-- <script src="assets/node_modules/velocity-animate/velocity.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js" integrity="sha256-/IeNFU9g1Tnj9pOKq3jGgIU2/kiKS+t1Q7pwym7mpoA=" crossorigin="anonymous"></script>
+  <!-- END : VELOCITY -->
+
+  <!-- LACOLUDO JS -->
+  <script src="assets/js/bar.js"></script>
+  <script src="assets/js/circle.js"></script>
+  <script src="assets/js/main.js"></script>
+  <!-- END : LACOLUDO JS -->
 
 </head>
 
@@ -154,7 +185,6 @@
 
   <!-- MAIN -->
 	<main class="cd-main">
-    <!-- SECTION -->
 		<section class="cd-section index visible">
 
       <!-- HEADER -->
@@ -175,158 +205,12 @@
       <!-- END : CONTENT -->
 
 		</section>
-    <!-- END : SECTION -->
 	</main>
   <!-- END : MAIN -->
 
   <!-- LATERAL LOADING BAR -->
   <div id="cd-loading-bar" data-scale="1" class="index"></div>
   <!-- END : LATERAL LOADING BAR -->
-
-  <!-- <div class="cd-projects-container">
-    <ul class="cd-projects">
-
-      <li>
-
-        <div class="cd-project-info">
-
-        </div>
-      </li>
-
-      <li>
-        <div class="preview-image">
-          <div class="cd-project-title">
-            <h2>Expériences</h2>
-            <i class="icon-briefcase" aria-hidden="true"></i>
-          </div>
-        </div>
-
-        <div class="cd-project-info">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col">
-                <h3>Wemblee</h3>
-                <div>
-                  <div class="col col-md-12">Développeur front-end
-                    <br>
-                    <br> mars 2016 – août 2016 (6 mois) | Puteaux
-                    <br>
-                    <br> - participation à un projet en méthode agile
-                    <br> - amélioration de l'expérience utilisateur
-                    <br> - production de maquettes
-                    <br> - productions graphiques
-                    <br> - réalisation des développements front-end
-                    <br>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <h3>Tamil Agaram</h3>
-                <div>
-                  <div class="col col-sm-12">Développeur + Designer + Assistant E-marketing
-                    <br>
-                    <br> avril 2016 – Aujourd’hui (7 mois) | Montmagny
-                    <br>
-                    <br> - conception expérience utilisateur
-                    <br> - réalisation d'un design responsive
-                    <br> - création du logo et des bannières
-                    <br> - optimisation du SEO
-                    <br> - gestion des réseaux sociaux
-                    <br>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <h3>Wemblee</h3>
-                <div>
-                  <div class="col col-md-12">Développeur front-end
-                    <br>
-                    <br> mars 2016 – août 2016 (6 mois) | Puteaux
-                    <br>
-                    <br> - participation à un projet en méthode agile
-                    <br> - amélioration de l'expérience utilisateur
-                    <br> - production de maquettes
-                    <br> - productions graphiques
-                    <br> - réalisation des développements front-end
-                    <br>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </li>
-
-      <li>
-        <div class="preview-image">
-          <div class="cd-project-title">
-            <h2>Formations</h2>
-            <i class="icon-badge" aria-hidden="true"></i>
-          </div>
-        </div>
-
-        <div class="cd-project-info">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col">
-                <h3 class="hideonsmall">2011<i class="fa fa-angle-double-right" aria-hidden="true"></i>2013</h3>
-                <div class="hideonsmall col-centered">
-                  <div class="col-sm-12">
-                    <div id="bac" class="circle"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <h3 class="hideonsmall">2013<i class="fa fa-angle-double-right" aria-hidden="true"></i>2015</h3>
-                <div class="hideonsmall col-centered">
-                  <div class="col-sm-12">
-                    <div id="dut" class="circle"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <h3 class="hideonsmall">2015<i class="fa fa-angle-double-right" aria-hidden="true"></i>2018</h3>
-                <div class="hideonsmall col-centered">
-                  <div class="col-sm-12">
-                    <div id="mas" class="circle"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-    </ul>
-
-    <button class="scroll cd-text-replace">Scroll</button>
-  </div> -->
-
-  <!-- JQUERY -->
-  <!-- <script src="assets/node_modules/jquery/dist/jquery.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <!-- END : JQUERY -->
-
-  <!-- BOOTSTRAP -->
-  <!-- <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script> -->
-  <!-- END : BOOTSTRAP -->
-
-  <!-- PROGRESSBAR.JS -->
-  <!-- <script src="assets/node_modules/progressbar.js/dist/progressbar.min.js"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js" integrity="sha256-VupM2GVVXK2c3Smq5LxXjUHBZveWTs35hu1al6ss6kk=" crossorigin="anonymous"></script> -->
-  <!-- END : PROGRESSBAR.JS -->
-
-  <!-- VELOCITY -->
-  <!-- <script src="assets/node_modules/velocity-animate/velocity.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js" integrity="sha256-/IeNFU9g1Tnj9pOKq3jGgIU2/kiKS+t1Q7pwym7mpoA=" crossorigin="anonymous"></script>
-  <!-- END : VELOCITY -->
-
-  <!-- LACOLUDO JS -->
-  <!-- <script src="assets/js/bar.js"></script> -->
-  <!-- <script src="assets/js/circle.js"></script> -->
-  <script src="assets/js/main.js"></script>
-  <!-- END : LACOLUDO JS -->
 
 </body>
 
