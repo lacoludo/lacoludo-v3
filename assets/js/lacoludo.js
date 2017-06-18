@@ -1,785 +1,173 @@
-// Bar
+function launchAnimations(){
+  if (window.location.href.endsWith("education.html")) {
+    // showCircles();
+  }
+  else if (window.location.href.endsWith("featured-skills.html")) {
+    showLines();
 
-var bar = new ProgressBar.Line(htmlcss, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
+    $('.devicon').hover(
+      function() {
+        $(this).addClass('colored')
+      },
+      function() {
+        $(this).removeClass('colored')
+      }
+    )
+  }
+  // else if (window.location.href.endsWith("accomplishments.html")) {
+  //   showLines();
+  // }
+}
+
+jQuery(document).ready(function($) {
+
+  launchAnimations();
+
+  //set some variables
+  var isAnimating = false,
+    firstLoad = false,
+    newScaleValue = 1;
+
+  //cache DOM elements
+  var dashboard = $('.cd-side-navigation'),
+    mainContent = $('.cd-main'),
+    loadingBar = $('#cd-loading-bar');
+
+  //select a new section
+  dashboard.on('click', 'a', function(event) {
+    event.preventDefault();
+    var target = $(this),
+      //detect which section user has chosen
+      sectionTarget = target.data('menu');
+    if (!target.hasClass('selected') && !isAnimating) {
+      //if user has selected a section different from the one alredy visible - load the new content
+      triggerAnimation(sectionTarget, true);
     }
-});
 
-bar.animate(0.9); // Number from 0.0 to 1.0
+    firstLoad = true;
+  });
 
-var bar = new ProgressBar.Line(javascript, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
+  //detect the 'popstate' event - e.g. user clicking the back button
+  $(window).on('popstate', function() {
+    if (firstLoad) {
+      /*
+		    Safari emits a popstate event on page load - check if firstLoad is true before animating
+		    if it's false - the page has just been loaded
+		    */
+      var newPageArray = location.pathname.split('/'),
+        //this is the url of the page to be loaded
+        newPage = newPageArray[newPageArray.length - 1].replace('.html', '');
+      if (!isAnimating)
+        triggerAnimation(newPage, false);
+      }
+    firstLoad = true;
+  });
+
+  //scroll to content if user clicks the .cd-scroll icon
+  mainContent.on('click', '.cd-scroll', function(event) {
+    event.preventDefault();
+    var scrollId = $(this.hash);
+    $(scrollId).velocity('scroll', {
+      container: $(".cd-section")
+    }, 200);
+  });
+
+  //start animation
+  function triggerAnimation(newSection, bool) {
+    isAnimating = true;
+    newSection = (newSection == '')
+      ? 'index'
+      : newSection;
+
+    //update dashboard
+    dashboard.find('*[data-menu="' + newSection + '"]').addClass('selected').parent('li').siblings('li').children('.selected').removeClass('selected');
+    //trigger loading bar animation
+    initializeLoadingBar(newSection);
+    //load new content
+    loadNewContent(newSection, bool);
+  }
+
+  function initializeLoadingBar(section) {
+    var selectedItem = dashboard.find('.selected'),
+      barHeight = selectedItem.outerHeight(),
+      barTop = selectedItem.offset().top,
+      windowHeight = $(window).height(),
+      maxOffset = (barTop + barHeight / 2 > windowHeight / 2)
+        ? barTop
+        : windowHeight - barTop - barHeight,
+      scaleValue = ((2 * maxOffset + barHeight) / barHeight).toFixed(3) / 1 + 0.001;
+
+    //place the loading bar next to the selected dashboard element
+    loadingBar.data('scale', scaleValue).css({height: barHeight, top: barTop}).attr('class', '').addClass('loading ' + section);
+  }
+
+  function loadNewContent(newSection, bool) {
+    setTimeout(function() {
+      //animate loading bar
+      loadingBarAnimation();
+
+      //create a new section element and insert it into the DOM
+      var section = $('<section class="cd-section overflow-hidden ' + newSection + '"></section>').appendTo(mainContent);
+      //load the new content from the proper html file
+      section.load(newSection + '.html .cd-section > *', function(event) {
+        //finish up the animation and then make the new section visible
+        var scaleMax = loadingBar.data('scale');
+
+        loadingBar.velocity('stop').velocity({
+          scaleY: scaleMax
+        }, 400, function() {
+          //add the .visible class to the new section element -> it will cover the old one
+          section.prev('.visible').removeClass('visible').end().addClass('visible').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
+            resetAfterAnimation(section);
+          });
+
+          //if browser doesn't support transition
+          if ($('.no-csstransitions').length > 0) {
+            resetAfterAnimation(section);
+          }
+
+          var url = newSection + '.html';
+
+          if (url != window.location && bool) {
+            //add the new page to the window.history
+            //if the new page was triggered by a 'popstate' event, don't add it
+            window.history.pushState({
+              path: url
+            }, '', url);
+          }
+
+          launchAnimations();
+
+        });
+      });
+
+    }, 50);
+  }
+
+  function loadingBarAnimation() {
+    var scaleMax = loadingBar.data('scale');
+    if (newScaleValue + 1 < scaleMax) {
+      newScaleValue = newScaleValue + 1;
+    } else if (newScaleValue + 0.5 < scaleMax) {
+      newScaleValue = newScaleValue + 0.5;
     }
+
+    loadingBar.velocity({
+      scaleY: newScaleValue
+    }, 100, loadingBarAnimation);
+  }
+
+  function resetAfterAnimation(newSection) {
+    //once the new section animation is over, remove the old section and make the new one scrollable
+    newSection.removeClass('overflow-hidden').prev('.cd-section').remove();
+    isAnimating = false;
+    //reset your loading bar
+    resetLoadingBar();
+  }
+
+  function resetLoadingBar() {
+    loadingBar.removeClass('loading').velocity({
+      scaleY: 1
+    }, 1);
+  }
 });
-
-bar.animate(0.5); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Line(angularjs, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
-    }
-});
-
-bar.animate(0.1); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Line(php, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
-    }
-});
-
-bar.animate(0.3); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Line(cms, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
-    }
-});
-
-bar.animate(0.5); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Line(uiux, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
-    }
-});
-
-bar.animate(0.8); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Line(webindexing, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
-    }
-});
-
-bar.animate(0.5); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Line(english, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
-    }
-});
-
-bar.animate(0.8); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Line(espanol, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
-    }
-});
-
-bar.animate(0.3); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Line(francais, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
-    }
-});
-
-bar.animate(0.9); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Line(telugu, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
-    }
-});
-
-bar.animate(0.2); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Line(thamizh, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
-    }
-});
-
-bar.animate(0.9); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Line(htmlcsssmall, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
-    }
-});
-
-bar.animate(0.9); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Line(javascriptsmall, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
-    }
-});
-
-bar.animate(0.5); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Line(angularjssmall, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
-    }
-});
-
-bar.animate(0.1); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Line(phpsmall, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
-    }
-});
-
-bar.animate(0.3); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Line(cmssmall, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
-    }
-});
-
-bar.animate(0.5); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Line(uiuxsmall, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
-    }
-});
-
-bar.animate(0.8); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Line(webindexingsmall, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
-    }
-});
-
-bar.animate(0.5); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Line(englishsmall, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
-    }
-});
-
-bar.animate(0.8); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Line(espanolsmall, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
-    }
-});
-
-bar.animate(0.3); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Line(francaissmall, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
-    }
-});
-
-bar.animate(0.9); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Line(telugusmall, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
-    }
-});
-
-bar.animate(0.2); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Line(thamizhsmall, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#01D5DA',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-        width: '100%',
-        height: '100%'
-    },
-    from: {
-        color: '#01D5DA'
-    },
-    to: {
-        color: '#01D5DA'
-    },
-    step: (state, bar) => {
-        bar.path.setAttribute('stroke', state.color);
-    }
-});
-
-bar.animate(0.9); // Number from 0.0 to 1.0
-
-// Circle
-
-var bar = new ProgressBar.Circle(bac, {
-    color: '#fff',
-    // This has to be the same size as the maximum width to
-    // prevent clipping
-    strokeWidth: 8,
-    trailWidth: 8,
-    easing: 'easeInOut',
-    duration: 3000,
-    text: {
-        autoStyleContainer: false
-    },
-    from: {
-        color: '#fff',
-        width: 8
-    },
-    to: {
-        color: '#01D5DA',
-        width: 8
-    },
-    // Set default step function for all animate calls
-    step: function(state, circle) {
-        circle.path.setAttribute('stroke', state.color);
-        circle.path.setAttribute('stroke-width', state.width);
-
-        var value = Math.round(circle.value() * 100);
-        if (value === 0) {
-            circle.setText('<b>BAC STG</b><br>LFP (INDE)');
-        }
-    }
-});
-bar.text.style.fontSize = '2rem';
-
-bar.animate(1.0); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Circle(dut, {
-    color: '#fff',
-    // This has to be the same size as the maximum width to
-    // prevent clipping
-    strokeWidth: 8,
-    trailWidth: 8,
-    easing: 'easeInOut',
-    duration: 3000,
-    text: {
-        autoStyleContainer: false
-    },
-    from: {
-        color: '#fff',
-        width: 8
-    },
-    to: {
-        color: '#01D5DA',
-        width: 8
-    },
-    // Set default step function for all animate calls
-    step: function(state, circle) {
-        circle.path.setAttribute('stroke', state.color);
-        circle.path.setAttribute('stroke-width', state.width);
-
-        var value = Math.round(circle.value() * 100);
-        if (value === 0) {
-            circle.setText('<b>DUT GLT</b><br>IUT D\'ÉVRY');
-        }
-    }
-});
-bar.text.style.fontSize = '2rem';
-
-bar.animate(1.0); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Circle(mas, {
-    color: '#fff',
-    trailColor: '#fff',
-    // This has to be the same size as the maximum width to
-    // prevent clipping
-    strokeWidth: 8,
-    trailWidth: 8,
-    easing: 'easeInOut',
-    duration: 3000,
-    text: {
-        autoStyleContainer: false
-    },
-    from: {
-        color: '#01D5DA',
-        width: 8
-    },
-    to: {
-        color: '#01D5DA',
-        width: 8
-    },
-    // Set default step function for all animate calls
-    step: function(state, circle) {
-        circle.path.setAttribute('stroke', state.color);
-        circle.path.setAttribute('stroke-width', state.width);
-
-        var value = Math.round(circle.value() * 100);
-        if (value === 0) {
-            circle.setText('<b>MASTÈRE DEV</b><br>ECV DIGITAL');
-        }
-    }
-});
-bar.text.style.fontSize = '2rem';
-
-bar.animate(0.3); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Circle(bacsmall, {
-    color: '#fff',
-    // This has to be the same size as the maximum width to
-    // prevent clipping
-    strokeWidth: 8,
-    trailWidth: 8,
-    easing: 'easeInOut',
-    duration: 3000,
-    text: {
-        autoStyleContainer: false
-    },
-    from: {
-        color: '#fff',
-        width: 8
-    },
-    to: {
-        color: '#01D5DA',
-        width: 8
-    },
-    // Set default step function for all animate calls
-    step: function(state, circle) {
-        circle.path.setAttribute('stroke', state.color);
-        circle.path.setAttribute('stroke-width', state.width);
-
-        var value = Math.round(circle.value() * 100);
-        if (value === 0) {
-            circle.setText('<b>BAC STG</b><br>LFP (INDE)');
-        }
-    }
-});
-bar.text.style.fontSize = '2rem';
-
-bar.animate(1.0); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Circle(dutsmall, {
-    color: '#fff',
-    // This has to be the same size as the maximum width to
-    // prevent clipping
-    strokeWidth: 8,
-    trailWidth: 8,
-    easing: 'easeInOut',
-    duration: 3000,
-    text: {
-        autoStyleContainer: false
-    },
-    from: {
-        color: '#fff',
-        width: 8
-    },
-    to: {
-        color: '#01D5DA',
-        width: 8
-    },
-    // Set default step function for all animate calls
-    step: function(state, circle) {
-        circle.path.setAttribute('stroke', state.color);
-        circle.path.setAttribute('stroke-width', state.width);
-
-        var value = Math.round(circle.value() * 100);
-        if (value === 0) {
-            circle.setText('<b>DUT GLT</b><br>IUT D\'ÉVRY');
-        }
-    }
-});
-bar.text.style.fontSize = '2rem';
-
-bar.animate(1.0); // Number from 0.0 to 1.0
-
-var bar = new ProgressBar.Circle(massmall, {
-    color: '#fff',
-    trailColor: '#fff',
-    // This has to be the same size as the maximum width to
-    // prevent clipping
-    strokeWidth: 8,
-    trailWidth: 8,
-    easing: 'easeInOut',
-    duration: 3000,
-    text: {
-        autoStyleContainer: false
-    },
-    from: {
-        color: '#01D5DA',
-        width: 8
-    },
-    to: {
-        color: '#01D5DA',
-        width: 8
-    },
-    // Set default step function for all animate calls
-    step: function(state, circle) {
-        circle.path.setAttribute('stroke', state.color);
-        circle.path.setAttribute('stroke-width', state.width);
-
-        var value = Math.round(circle.value() * 100);
-        if (value === 0) {
-            circle.setText('<b>MASTÈRE DEV</b><br>ECV DIGITAL');
-        }
-    }
-});
-bar.text.style.fontSize = '2rem';
-
-bar.animate(0.3); // Number from 0.0 to 1.0

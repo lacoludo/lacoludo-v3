@@ -46,7 +46,7 @@ Navigation
   height: 100%;
   width: -webkit-calc(100% - 4px);
   width: calc(100% - 4px);
-  background-color: #060606;
+  background-color: #191919;
 }
 .cd-side-navigation ul {
   height: 100%;
@@ -60,10 +60,11 @@ Navigation
 .cd-side-navigation a {
   display: block;
   position: relative;
-  padding: 4em 0 1.5em;
+  padding: 1.5em 0 1.5em;
   font-size: 1.2rem;
   text-align: center;
-  color: #4a5261;
+  color: #7f7f7f;
+  text-decoration: none;
   -webkit-transition: background-color 0.2s, color 0.2s;
   -moz-transition: background-color 0.2s, color 0.2s;
   transition: background-color 0.2s, color 0.2s;
@@ -160,7 +161,7 @@ Navigation
     width: 94px;
   }
   .cd-side-navigation a {
-    padding: 4em 0 1.5em;
+    padding: 1.5em 0 1.5em;
     font-size: 1.3rem;
   }
   .cd-side-navigation a svg {
@@ -397,7 +398,7 @@ Navigation
 }
 
 .cd-content {
-  padding: 2em 0;
+  /*padding: 2em 0;*/
   background-color: #000;
 }
 .cd-content p {
