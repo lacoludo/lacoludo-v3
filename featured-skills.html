@@ -76,11 +76,12 @@
 
   <!-- BOOTSTRAP -->
   <!-- <link rel="stylesheet" href="assets/node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
   <!-- END : BOOTSTRAP -->
 
   <!-- LACOLUDO CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/lacoludo.css">
   <!-- END : LACOLUDO CSS -->
 
   <!-- SIMPLE LINE ICONS -->
@@ -105,7 +106,7 @@
 
   <!-- BOOTSTRAP -->
   <!-- <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
   <!-- END : BOOTSTRAP -->
 
   <!-- PROGRESSBAR.JS -->
@@ -119,7 +120,7 @@
   <!-- END : VELOCITY -->
 
   <!-- LACOLUDO JS -->
-  <script src="assets/js/bar.js"></script>
+  <script src="assets/js/line.js"></script>
   <script src="assets/js/circle.js"></script>
   <script src="assets/js/main.js"></script>
   <!-- END : LACOLUDO JS -->
@@ -128,50 +129,50 @@
 
 <body>
 
-	<!-- SIDE NAVIGATION -->
+  <!-- SIDE NAVIGATION -->
   <nav class="cd-side-navigation">
-		<ul>
-			<li>
-				<a href="#0" data-menu="index" style="padding-top: 1.5em;">
+    <ul>
+      <li>
+        <a href="#0" data-menu="index" style="padding-top: 1.5em;">
           <div class="icon icon-user" style="font-size: 30px;"></div>
-					Introduction
-				</a>
-			</li>
+          Introduction
+        </a>
+      </li>
 
-			<li>
-				<a href="#0" data-menu="experience" style="padding-top: 1.5em;">
+      <li>
+        <a href="#0" data-menu="experience" style="padding-top: 1.5em;">
           <div class="icon icon-briefcase" style="font-size: 30px;"></div>
-					Experience
-				</a>
-			</li>
+          Experience
+        </a>
+      </li>
 
-			<li>
-				<a href="#0" data-menu="education" style="padding-top: 1.5em;">
+      <li>
+        <a href="#0" data-menu="education" style="padding-top: 1.5em;">
           <div class="icon icon-graduation" style="font-size: 30px;"></div>
           Education
-				</a>
-			</li>
+        </a>
+      </li>
 
-			<li>
-				<a href="#0" data-menu="volunteer-experience" style="padding-top: 1.5em;">
+      <li>
+        <a href="#0" data-menu="volunteer-experience" style="padding-top: 1.5em;">
           <div class="icon icon-umbrella" style="font-size: 30px;"></div>
           Volunteer Experience
-				</a>
-			</li>
+        </a>
+      </li>
 
-			<li>
-				<a href="#0" data-menu="featured-skills" class="selected" style="padding-top: 1.5em;">
+      <li>
+        <a href="#0" data-menu="featured-skills" class="selected" style="padding-top: 1.5em;">
           <div class="icon icon-chart" style="font-size: 30px;"></div>
           Featured Skills
-				</a>
-			</li>
+        </a>
+      </li>
 
-			<li>
-				<a href="#0" data-menu="accomplishments" style="padding-top: 1.5em;">
+      <li>
+        <a href="#0" data-menu="accomplishments" style="padding-top: 1.5em;">
           <div class="icon icon-trophy" style="font-size: 30px;"></div>
           Accomplishments
-				</a>
-			</li>
+        </a>
+      </li>
 
       <li>
         <a href="#0" data-menu="interests" style="padding-top: 1.5em;">
@@ -179,99 +180,413 @@
           Interests
         </a>
       </li>
-		</ul>
-	</nav>
+    </ul>
+  </nav>
   <!-- END : SIDE NAVIGATION -->
 
-	<!-- MAIN -->
+  <!-- MAIN -->
   <main class="cd-main">
     <section class="cd-section featured-skills visible">
-
-      <!-- HEADER -->
-      <header>
-        <div class="cd-title">
-          <h2>Featured Skills</h2>
-        </div>
-        <a href="#featured-skills-content" class="cd-scroll">Scroll Down</a>
-      </header>
-      <!-- END : HEADER -->
 
       <!-- CONTENT -->
       <div class="cd-content" id="featured-skills-content">
         <div class="container">
-          <div class="row align-items-center">
-            <div class="col">
-              <h3 class="hideonsmall">Compétences en Informatique</h3>
-              <div class="hideonsmall">
-                <div class="col-sm-12">
-                  <div id="htmlcss" class="bar">
-                    <i class="devicon-html5-plain"></i>
-                    <i class="devicon-css3-plain"></i>
-                  </div>
+          <div class="row">
+
+            <!-- FULL STACK -->
+            <div class="col-md-12">
+              <h3>Full stack</h3>
+
+              <!-- HTML -->
+              <div class="col-md-12 skill-box">
+                <div class="col-md-1 col-sm-12 skill-logo">
+                  <i class="devicon devicon-html5-plain"></i>
                 </div>
-                <div class="col-sm-12">
-                  <div id="javascript" class="bar">
-                    <i class="devicon-javascript-plain"></i>
-                  </div>
+                <div class="col-md-2">
+                  <p class="skill-name">HTML</p>
                 </div>
-                <div class="col-sm-12">
-                  <div id="angularjs" class="bar">
-                    <i class="devicon-angularjs-plain"></i>
-                  </div>
-                </div>
-                <div class="col-sm-12">
-                  <div id="php" class="bar">
-                    <i class="devicon-php-plain"></i>
-                  </div>
-                </div>
-                <div class="col-sm-12">
-                  <div id="cms" class="bar">
-                    <i class="devicon-wordpress-plain"></i>
-                    <i class="devicon-drupal-plain"></i>
-                  </div>
-                </div>
-                <div class="col-sm-12">
-                  <div id="uiux" class="bar">
-                    <label class="pull-left">UI / UX</label>
-                  </div>
-                </div>
-                <div class="col-sm-12">
-                  <div id="webindexing" class="bar">
-                    <i class="devicon-google-plain"></i>
-                  </div>
+                <div class="col-md-9">
+                  <div id="html" class="line"></div>
                 </div>
               </div>
-            </div>
-            <div class="col">
-              <h3 class="hideonsmall">Compétences en Langues</h3>
-              <div class="hideonsmall">
-                <div class="col-sm-12">
-                  <div id="english" class="bar">
-                    <label class="pull-left">English</label>
-                  </div>
+              <!-- END : HTML -->
+
+              <!-- CSS -->
+              <div class="col-md-12 skill-box">
+                <div class="col-md-1 col-sm-12 skill-logo">
+                  <i class="devicon devicon-css3-plain"></i>
                 </div>
-                <div class="col-sm-12">
-                  <div id="espanol" class="bar">
-                    <label class="pull-left">Español</label>
-                  </div>
+                <div class="col-md-2">
+                  <p class="skill-name">CSS</p>
                 </div>
-                <div class="col-sm-12">
-                  <div id="francais" class="bar">
-                    <label class="pull-left">Français</label>
-                  </div>
-                </div>
-                <div class="col-sm-12">
-                  <div id="telugu" class="bar">
-                    <label class="pull-left">తెలుగు</label>
-                  </div>
-                </div>
-                <div class="col-sm-12">
-                  <div id="thamizh" class="bar">
-                    <label class="pull-left">தமிழ்</label>
-                  </div>
+                <div class="col-md-9">
+                  <div id="css" class="line"></div>
                 </div>
               </div>
+              <!-- END : CSS -->
+
+              <!-- JAVASCRIPT -->
+              <div class="col-md-12 skill-box">
+                <div class="col-md-1 col-sm-12 skill-logo">
+                  <i class="devicon devicon-javascript-plain"></i>
+                </div>
+                <div class="col-md-2">
+                  <p class="skill-name">JavaScript</p>
+                </div>
+                <div class="col-md-9">
+                  <div id="javascript" class="line"></div>
+                </div>
+              </div>
+              <!-- END : JAVASCRIPT -->
+
+              <!-- PHP -->
+              <div class="col-md-12 skill-box">
+                <div class="col-md-1 col-sm-12 skill-logo">
+                  <i class="devicon devicon-php-plain"></i>
+                </div>
+                <div class="col-md-2">
+                  <p class="skill-name">PHP</p>
+                </div>
+                <div class="col-md-9">
+                  <div id="php" class="line"></div>
+                </div>
+              </div>
+              <!-- END : PHP -->
+
+              <!-- MYSQL -->
+              <div class="col-md-12 skill-box">
+                <div class="col-md-1 col-sm-12 skill-logo">
+                  <i class="devicon devicon-mysql-plain"></i>
+                </div>
+                <div class="col-md-2">
+                  <p class="skill-name">MySQL</p>
+                </div>
+                <div class="col-md-9">
+                  <div id="mysql" class="line"></div>
+                </div>
+              </div>
+              <!-- END : MYSQL -->
+
             </div>
+            <!-- END : FULL STACK -->
+
+            <!-- MEAN STACK -->
+            <div class="col-md-12">
+              <h3>MEAN stack</h3>
+
+              <!-- MONGODB -->
+              <div class="col-md-12 skill-box">
+                <div class="col-md-1 col-sm-12 skill-logo">
+                  <i class="devicon devicon-mongodb-plain"></i>
+                </div>
+                <div class="col-md-2">
+                  <p class="skill-name">MongoDB</p>
+                </div>
+                <div class="col-md-9">
+                  <div id="mongodb" class="line"></div>
+                </div>
+              </div>
+              <!-- END : MONGODB -->
+
+              <!-- EXPRESS -->
+              <div class="col-md-12 skill-box">
+                <div class="col-md-1 col-sm-12 skill-logo">
+                  <i class="devicon devicon-express-original"></i>
+                </div>
+                <div class="col-md-2">
+                  <p class="skill-name">Express</p>
+                </div>
+                <div class="col-md-9">
+                  <div id="express" class="line"></div>
+                </div>
+              </div>
+              <!-- END : EXPRESS -->
+
+              <!-- ANGULAR -->
+              <div class="col-md-12 skill-box">
+                <div class="col-md-1 col-sm-12 skill-logo">
+                  <i class="devicon devicon-angularjs-plain"></i>
+                </div>
+                <div class="col-md-2">
+                  <p class="skill-name">Angular</p>
+                </div>
+                <div class="col-md-9">
+                  <div id="angular" class="line"></div>
+                </div>
+              </div>
+              <!-- END : ANGULAR -->
+
+              <!-- NODE.JS -->
+              <div class="col-md-12 skill-box">
+                <div class="col-md-1 col-sm-12 skill-logo">
+                  <i class="devicon devicon-nodejs-plain"></i>
+                </div>
+                <div class="col-md-2">
+                  <p class="skill-name">Node.js</p>
+                </div>
+                <div class="col-md-9">
+                  <div id="nodejs" class="line"></div>
+                </div>
+              </div>
+              <!-- END : NODE.JS -->
+
+            </div>
+            <!-- END : MEAN STACK -->
+
+            <!-- FRAMEWORKS -->
+            <div class="col-md-12">
+              <h3>Frameworks + Libraries</h3>
+
+              <!-- BOOTSTRAP -->
+              <div class="col-md-12 skill-box">
+                <div class="col-md-1 col-sm-12 skill-logo">
+                  <i class="devicon devicon-bootstrap-plain"></i>
+                </div>
+                <div class="col-md-2">
+                  <p class="skill-name">Bootstrap</p>
+                </div>
+                <div class="col-md-9">
+                  <div id="bootstrap" class="line"></div>
+                </div>
+              </div>
+              <!-- END : BOOTSTRAP -->
+
+              <!-- FOUNDATION -->
+              <div class="col-md-12 skill-box">
+                <div class="col-md-1 col-sm-12 skill-logo">
+                  <i class="devicon devicon-foundation-plain"></i>
+                </div>
+                <div class="col-md-2">
+                  <p class="skill-name">Foundation</p>
+                </div>
+                <div class="col-md-9">
+                  <div id="foundation" class="line"></div>
+                </div>
+              </div>
+              <!-- END : FOUNDATION -->
+
+              <!-- JQUERY -->
+              <div class="col-md-12 skill-box">
+                <div class="col-md-1 col-sm-12 skill-logo">
+                  <i class="devicon devicon-jquery-plain"></i>
+                </div>
+                <div class="col-md-2">
+                  <p class="skill-name">jQuery</p>
+                </div>
+                <div class="col-md-9">
+                  <div id="jquery" class="line"></div>
+                </div>
+              </div>
+              <!-- END : JQUERY -->
+
+              <!-- REACT -->
+              <!-- <div class="col-md-12 skill-box">
+                <div class="col-md-1 col-sm-12 skill-logo">
+                  <i class="devicon devicon-react-original"></i>
+                </div>
+                <div class="col-md-2">
+                  <p class="skill-name">React</p>
+                </div>
+                <div class="col-md-9">
+                  <div id="react" class="line"></div>
+                </div>
+              </div> -->
+              <!-- END : REACT -->
+
+              <!-- SYMFONY -->
+              <div class="col-md-12 skill-box">
+                <div class="col-md-1 col-sm-12 skill-logo">
+                  <i class="devicon devicon-symfony-original"></i>
+                </div>
+                <div class="col-md-2">
+                  <p class="skill-name">Symfony</p>
+                </div>
+                <div class="col-md-9">
+                  <div id="symfony" class="line"></div>
+                </div>
+              </div>
+              <!-- END : SYMFONY -->
+
+            </div>
+            <!-- END : LIBRARIES -->
+
+            <!-- PREPROCESSORS -->
+            <div class="col-md-12">
+              <h3>Preprocessors</h3>
+
+              <!-- SASS -->
+              <div class="col-md-12 skill-box">
+                <div class="col-md-1 col-sm-12 skill-logo">
+                  <i class="devicon devicon-sass-original"></i>
+                </div>
+                <div class="col-md-2">
+                  <p class="skill-name">Sass</p>
+                </div>
+                <div class="col-md-9">
+                  <div id="sass" class="line"></div>
+                </div>
+              </div>
+              <!-- END : SASS -->
+
+              <!-- TYPESCRIPT -->
+              <!-- <div class="col-md-12 skill-box">
+                <div class="col-md-1 col-sm-12 skill-logo">
+                  <i class="devicon devicon-typescript-plain"></i>
+                </div>
+                <div class="col-md-2">
+                  <p class="skill-name">TypeScript</p>
+                </div>
+                <div class="col-md-9">
+                  <div id="react" class="line"></div>
+                </div>
+              </div> -->
+              <!-- END : TYPESCRIPT -->
+
+            </div>
+            <!-- END : PREPROCESSORS -->
+
+            <!-- TOOLS -->
+            <div class="col-md-12">
+              <h3>Tools</h3>
+
+              <!-- BABEL -->
+              <div class="col-md-3 skill-box">
+                <div class="col-md-12 skill-logo">
+                  <i class="devicon devicon-babel-plain"></i>
+                </div>
+                <div class="col-md-12">
+                  <p class="skill-name">Babel</p>
+                </div>
+              </div>
+              <!-- END : BABEL -->
+
+              <!-- WEBPACK -->
+              <div class="col-md-3 skill-box">
+                <div class="col-md-12 skill-logo">
+                  <i class="devicon devicon-webpack-plain"></i>
+                </div>
+                <div class="col-md-12">
+                  <p class="skill-name">Webpack</p>
+                </div>
+              </div>
+              <!-- END : WEBPACK -->
+
+              <!-- GULP -->
+              <div class="col-md-3 skill-box">
+                <div class="col-md-12 skill-logo">
+                  <i class="devicon devicon-gulp-plain"></i>
+                </div>
+                <div class="col-md-12">
+                  <p class="skill-name">Gulp</p>
+                </div>
+              </div>
+              <!-- END : GULP -->
+
+              <!-- GRUNT -->
+              <div class="col-md-3 skill-box">
+                <div class="col-md-12 skill-logo">
+                  <i class="devicon devicon-grunt-plain"></i>
+                </div>
+                <div class="col-md-12">
+                  <p class="skill-name">Grunt</p>
+                </div>
+              </div>
+              <!-- END : GRUNT -->
+
+            </div>
+            <!-- END : TOOLS -->
+
+            <!-- CMS -->
+            <div class="col-md-12">
+              <h3>CMS</h3>
+
+              <!-- WORDPRESS -->
+              <div class="col-md-12 skill-box">
+                <div class="col-md-1 col-sm-12 skill-logo">
+                  <i class="devicon devicon-wordpress-plain"></i>
+                </div>
+                <div class="col-md-2">
+                  <p class="skill-name">WordPress</p>
+                </div>
+                <div class="col-md-9">
+                  <div id="wordpress" class="line"></div>
+                </div>
+              </div>
+              <!-- END : WORDPRESS -->
+
+              <!-- DRUPAL -->
+              <div class="col-md-12 skill-box">
+                <div class="col-md-1 col-sm-12 skill-logo">
+                  <i class="devicon devicon-drupal-plain"></i>
+                </div>
+                <div class="col-md-2">
+                  <p class="skill-name">Drupal</p>
+                </div>
+                <div class="col-md-9">
+                  <div id="drupal" class="line"></div>
+                </div>
+              </div>
+              <!-- END : DRUPAL -->
+
+            </div>
+            <!-- END : CMS -->
+
+            <!-- DESIGN -->
+            <div class="col-md-12">
+              <h3>Design</h3>
+
+              <!-- PHOTOSHOP -->
+              <div class="col-md-12 skill-box">
+                <div class="col-md-1 col-sm-12 skill-logo">
+                  <i class="devicon devicon-photoshop-plain"></i>
+                </div>
+                <div class="col-md-2">
+                  <p class="skill-name">Photoshop</p>
+                </div>
+                <div class="col-md-9">
+                  <div id="photoshop" class="line"></div>
+                </div>
+              </div>
+              <!-- END : PHOTOSHOP -->
+
+              <!-- ILLUSTRATOR -->
+              <div class="col-md-12 skill-box">
+                <div class="col-md-1 col-sm-12 skill-logo">
+                  <i class="devicon devicon-illustrator-plain"></i>
+                </div>
+                <div class="col-md-2">
+                  <p class="skill-name">Illustrator</p>
+                </div>
+                <div class="col-md-9">
+                  <div id="illustrator" class="line"></div>
+                </div>
+              </div>
+              <!-- END : ILLUSTRATOR -->
+
+            </div>
+            <!-- END : DESIGN -->
+
+            <!-- SEO -->
+            <div class="col-md-12">
+              <h3>SEO</h3>
+
+              <!-- OPTIMIZATION -->
+              <div class="col-md-12 skill-box">
+                <div class="col-md-1 col-sm-12 skill-logo">
+                  <i class="devicon devicon-google-plain"></i>
+                </div>
+                <div class="col-md-2">
+                  <p class="skill-name">Optimization</p>
+                </div>
+                <div class="col-md-9">
+                  <div id="optimization" class="line"></div>
+                </div>
+              </div>
+              <!-- END : OPTIMIZATION -->
+
+            </div>
+            <!-- END : SEO -->
+
           </div>
         </div>
       </div>
@@ -281,9 +596,20 @@
   </main>
   <!-- END : MAIN -->
 
-	<!-- LATERAL LOADING BAR -->
+  <!-- LATERAL LOADING BAR -->
   <div id="cd-loading-bar" data-scale="1" class="index"></div>
   <!-- END : LATERAL LOADING BAR -->
+
+  <script>
+    $('.devicon').hover(
+      function() {
+        $(this).addClass('colored')
+      },
+      function() {
+        $(this).removeClass('colored')
+      }
+    )
+  </script>
 
 </body>
 

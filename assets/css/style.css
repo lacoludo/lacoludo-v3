@@ -14,7 +14,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Rajdhani", sans-serif;
-  color: #83b0b9;
+  color: #fff;
   background-color: #343943;
 }
 
@@ -398,7 +398,7 @@ Navigation
 
 .cd-content {
   padding: 2em 0;
-  background-color: #ebebeb;
+  background-color: #000;
 }
 .cd-content p {
   width: 90%;
@@ -406,7 +406,7 @@ Navigation
   margin: 0 auto 2em;
   font-size: 1.4rem;
   line-height: 1.6;
-  color: #999999;
+  color: #fff;
 }
 @media only screen and (min-width: 768px) {
   .cd-content {

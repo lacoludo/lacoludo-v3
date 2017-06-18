@@ -3,8 +3,11 @@ function launchAnimations(){
     showCircles();
   }
   else if (window.location.href.endsWith("featured-skills.html")) {
-    showBars();
+    showLines();
   }
+  // else if (window.location.href.endsWith("accomplishments.html")) {
+  //   showLines();
+  // }
 }
 
 jQuery(document).ready(function($) {
