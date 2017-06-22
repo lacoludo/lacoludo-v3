@@ -2,7 +2,7 @@ function launchAnimations(){
   if (window.location.href.endsWith("education.html")) {
     // showCircles();
   }
-  else if (window.location.href.endsWith("featured-skills.html")) {
+  else if (window.location.href.endsWith("skills.html")) {
     showLines();
 
     $('.devicon').hover(

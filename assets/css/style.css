@@ -216,19 +216,13 @@ Navigation
   background: #000;
   overflow: hidden;
 }
-.cd-section.experience header {
+.cd-section.portfolio header {
   background-color: #000;
 }
-.cd-section.education header {
+.cd-section.skills header {
   background-color: #000;
 }
-.cd-section.volunteer-experience header {
-  background-color: #000;
-}
-.cd-section.featured-skills header {
-  background-color: #000;
-}
-.cd-section.accomplishments header {
+.cd-section.journey header {
   background-color: #000;
 }
 .cd-section.interests header {
@@ -404,7 +398,7 @@ Navigation
 .cd-content p {
   width: 90%;
   max-width: 800px;
-  margin: 0 auto 2em;
+  margin: 0;
   font-size: 1.4rem;
   line-height: 1.6;
   color: #fff;
@@ -441,19 +435,13 @@ Navigation
 #cd-loading-bar.index {
   background-color: #01d5da;
 }
-#cd-loading-bar.experience {
+#cd-loading-bar.portfolio {
   background-color: #01d5da;
 }
-#cd-loading-bar.education {
+#cd-loading-bar.skills {
   background-color: #01d5da;
 }
-#cd-loading-bar.volunteer-experience {
-  background-color: #01d5da;
-}
-#cd-loading-bar.featured-skills {
-  background-color: #01d5da;
-}
-#cd-loading-bar.accomplishments {
+#cd-loading-bar.journey {
   background-color: #01d5da;
 }
 #cd-loading-bar.interests {

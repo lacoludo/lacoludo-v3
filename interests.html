@@ -65,13 +65,13 @@
   <!-- END : MODERNIZR -->
 
   <!-- RESET CSS -->
-  <!-- <link rel="stylesheet" href="assets/node_modules/reset-css/reset.css"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="assets/bower_components/reset-css/reset.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" /> -->
   <!-- END : RESET CSS -->
 
   <!-- BOOTSTRAP -->
-  <!-- <link rel="stylesheet" href="assets/node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" /> -->
   <!-- END : BOOTSTRAP -->
 
   <!-- LACOLUDO CSS -->
@@ -80,13 +80,13 @@
   <!-- END : LACOLUDO CSS -->
 
   <!-- SIMPLE LINE ICONS -->
-  <!-- <link rel="stylesheet" href="assets/node_modules/simple-line-icons/css/simple-line-icons.css"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+  <link rel="stylesheet" href="assets/bower_components/simple-line-icons/css/simple-line-icons.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css"> -->
   <!-- END : SIMPLE LINE ICONS -->
 
   <!-- DEVICON -->
-  <!-- <link rel="stylesheet" href="assets/node_modules/devicon/devicon.min.css"> -->
-  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <link rel="stylesheet" href="assets/bower_components/devicon/devicon.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"> -->
   <!-- END : DEVICON -->
 
   <!-- GOOGLE FONTS -->
@@ -94,80 +94,40 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo">
   <!-- END : GOOGLE FONTS -->
 
-  <!-- JQUERY -->
-  <!-- <script src="assets/node_modules/jquery/dist/jquery.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <!-- END : JQUERY -->
-
-  <!-- BOOTSTRAP -->
-  <!-- <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script> -->
-  <!-- END : BOOTSTRAP -->
-
-  <!-- PROGRESSBAR.JS -->
-  <!-- <script src="assets/node_modules/progressbar.js/dist/progressbar.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js" integrity="sha256-VupM2GVVXK2c3Smq5LxXjUHBZveWTs35hu1al6ss6kk=" crossorigin="anonymous"></script>
-  <!-- END : PROGRESSBAR.JS -->
-
-  <!-- VELOCITY -->
-  <!-- <script src="assets/node_modules/velocity-animate/velocity.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js" integrity="sha256-/IeNFU9g1Tnj9pOKq3jGgIU2/kiKS+t1Q7pwym7mpoA=" crossorigin="anonymous"></script>
-  <!-- END : VELOCITY -->
-
-  <!-- LACOLUDO JS -->
-  <script src="assets/js/line.js"></script>
-  <script src="assets/js/circle.js"></script>
-  <script src="assets/js/lacoludo.js"></script>
-  <!-- END : LACOLUDO JS -->
-
 </head>
 
 <body>
 
 	<!-- SIDE NAVIGATION -->
   <nav class="cd-side-navigation">
-		<ul>
-			<li>
-				<a href="#0" data-menu="index">
+    <ul>
+      <li>
+        <a href="#0" data-menu="index">
           <div class="icon icon-user"></div>
-					Introduction
-				</a>
-			</li>
+          Introduction
+        </a>
+      </li>
 
-			<li>
-				<a href="#0" data-menu="experience">
-          <div class="icon icon-briefcase"></div>
-					Experience
-				</a>
-			</li>
+      <li>
+        <a href="#0" data-menu="portfolio">
+          <div class="icon icon-grid"></div>
+          Portfolio
+        </a>
+      </li>
 
-			<li>
-				<a href="#0" data-menu="education">
-          <div class="icon icon-graduation"></div>
-          Education
-				</a>
-			</li>
-
-			<li>
-				<a href="#0" data-menu="volunteer-experience">
-          <div class="icon icon-umbrella"></div>
-          Volunteer Experience
-				</a>
-			</li>
-
-			<li>
-				<a href="#0" data-menu="featured-skills">
+      <li>
+        <a href="#0" data-menu="skills">
           <div class="icon icon-chart"></div>
-          Featured Skills
-				</a>
-			</li>
+          Skills
+        </a>
+      </li>
 
-			<li>
-				<a href="#0" data-menu="accomplishments">
-          <div class="icon icon-trophy"></div>
-          Accomplishments
-				</a>
-			</li>
+      <li>
+        <a href="#0" data-menu="journey">
+          <div class="icon icon-directions"></div>
+          Journey
+        </a>
+      </li>
 
       <li>
         <a href="#0" data-menu="interests" class="selected">
@@ -176,7 +136,7 @@
         </a>
       </li>
     </ul>
-	</nav>
+  </nav>
   <!-- END : SIDE NAVIGATION -->
 
 	<!-- MAIN -->
@@ -223,6 +183,31 @@
 	<!-- LATERAL LOADING BAR -->
   <div id="cd-loading-bar" data-scale="1" class="index"></div>
   <!-- END : LATERAL LOADING BAR -->
+
+  <!-- JQUERY -->
+  <script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> -->
+  <!-- END : JQUERY -->
+
+  <!-- BOOTSTRAP -->
+  <script src="assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script> -->
+  <!-- END : BOOTSTRAP -->
+
+  <!-- PROGRESSBAR.JS -->
+  <script src="assets/bower_components/progressbar.js/dist/progressbar.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js" integrity="sha256-VupM2GVVXK2c3Smq5LxXjUHBZveWTs35hu1al6ss6kk=" crossorigin="anonymous"></script> -->
+  <!-- END : PROGRESSBAR.JS -->
+
+  <!-- VELOCITY -->
+  <script src="assets/bower_components/velocity/velocity.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js" integrity="sha256-/IeNFU9g1Tnj9pOKq3jGgIU2/kiKS+t1Q7pwym7mpoA=" crossorigin="anonymous"></script> -->
+  <!-- END : VELOCITY -->
+
+  <!-- LACOLUDO JS -->
+  <script src="assets/js/line.js"></script>
+  <script src="assets/js/lacoludo.js"></script>
+  <!-- END : LACOLUDO JS -->
 
 </body>
 

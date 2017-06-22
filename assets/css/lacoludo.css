@@ -46,6 +46,7 @@
   background-color: inherit;
   border: 1px solid #ccc;
   border-radius: 0;
+  font-family: "Rajdhani", sans-serif;
 }
 
 .popover-title {
@@ -230,10 +231,13 @@
     clear: left;
     width: 45%;
   }
+  .timeline>li.timeline-normal {
+    margin-top: 20px;
+  }
   .timeline>li.timeline-inverted {
     float: right;
     clear: right;
-    margin-top: 50px;
+    margin-top: 20px;
   }
   .timeline>li.timeline-separator {
     text-align: center;
@@ -283,5 +287,11 @@
     width: auto;
     margin-left: 0;
     margin-right: 36px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .timeline>li, .timeline-alt>li {
+    margin-bottom: 0;
   }
 }
