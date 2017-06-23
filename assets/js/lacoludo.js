@@ -1,6 +1,6 @@
 function launchAnimations(){
-  if (window.location.href.endsWith("education.html")) {
-    // showCircles();
+  if (window.location.href.endsWith("journey.html")) {
+    showTimeline();
   }
   else if (window.location.href.endsWith("skills.html")) {
     showLines();

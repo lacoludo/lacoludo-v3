@@ -1,0 +1,58 @@
+.icon {
+  font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skill-box {
+    margin: 28px 0 28px 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .skill-box {
+    margin: 30px 0 30px 0;
+  }
+}
+
+.skill-logo {
+  text-align: center;
+}
+
+.devicon {
+  font-size: 30px;
+}
+
+.skill-name {
+  text-align: center;
+}
+
+.line {
+  height: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .line {
+    margin-top: -28px;
+  }
+}
+
+.popover {
+  background-color: inherit;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  font-family: "Rajdhani", sans-serif;
+}
+
+.popover-title {
+  background-color: #191919;
+}
+
+.popover-content {
+  background-color: #191919;
+}
