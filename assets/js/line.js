@@ -1,10 +1,10 @@
 function showLines() {
-
+  
   var line = new ProgressBar.Line("#html", {
     strokeWidth: 4,
     easing: 'easeInOut',
     duration: 5000,
-    color: '#01d5da',
+    color: '#61dafb',
     trailColor: '#eee',
     trailWidth: 4,
     svgStyle: {
@@ -18,7 +18,7 @@ function showLines() {
     strokeWidth: 4,
     easing: 'easeInOut',
     duration: 5000,
-    color: '#01d5da',
+    color: '#61dafb',
     trailColor: '#eee',
     trailWidth: 4,
     svgStyle: {
@@ -32,7 +32,7 @@ function showLines() {
     strokeWidth: 4,
     easing: 'easeInOut',
     duration: 5000,
-    color: '#01d5da',
+    color: '#61dafb',
     trailColor: '#eee',
     trailWidth: 4,
     svgStyle: {
@@ -46,7 +46,7 @@ function showLines() {
     strokeWidth: 4,
     easing: 'easeInOut',
     duration: 5000,
-    color: '#01d5da',
+    color: '#61dafb',
     trailColor: '#eee',
     trailWidth: 4,
     svgStyle: {
@@ -60,7 +60,7 @@ function showLines() {
     strokeWidth: 4,
     easing: 'easeInOut',
     duration: 5000,
-    color: '#01d5da',
+    color: '#61dafb',
     trailColor: '#eee',
     trailWidth: 4,
     svgStyle: {
@@ -74,7 +74,7 @@ function showLines() {
     strokeWidth: 4,
     easing: 'easeInOut',
     duration: 5000,
-    color: '#01d5da',
+    color: '#61dafb',
     trailColor: '#eee',
     trailWidth: 4,
     svgStyle: {
@@ -88,7 +88,7 @@ function showLines() {
     strokeWidth: 4,
     easing: 'easeInOut',
     duration: 5000,
-    color: '#01d5da',
+    color: '#61dafb',
     trailColor: '#eee',
     trailWidth: 4,
     svgStyle: {
@@ -102,7 +102,7 @@ function showLines() {
     strokeWidth: 4,
     easing: 'easeInOut',
     duration: 5000,
-    color: '#01d5da',
+    color: '#61dafb',
     trailColor: '#eee',
     trailWidth: 4,
     svgStyle: {
@@ -116,7 +116,7 @@ function showLines() {
     strokeWidth: 4,
     easing: 'easeInOut',
     duration: 5000,
-    color: '#01d5da',
+    color: '#61dafb',
     trailColor: '#eee',
     trailWidth: 4,
     svgStyle: {
@@ -130,7 +130,7 @@ function showLines() {
     strokeWidth: 4,
     easing: 'easeInOut',
     duration: 5000,
-    color: '#01d5da',
+    color: '#61dafb',
     trailColor: '#eee',
     trailWidth: 4,
     svgStyle: {
@@ -144,7 +144,7 @@ function showLines() {
     strokeWidth: 4,
     easing: 'easeInOut',
     duration: 5000,
-    color: '#01d5da',
+    color: '#61dafb',
     trailColor: '#eee',
     trailWidth: 4,
     svgStyle: {
@@ -158,7 +158,7 @@ function showLines() {
     strokeWidth: 4,
     easing: 'easeInOut',
     duration: 5000,
-    color: '#01d5da',
+    color: '#61dafb',
     trailColor: '#eee',
     trailWidth: 4,
     svgStyle: {
@@ -168,25 +168,53 @@ function showLines() {
   });
   line.animate(0.7);
 
-  // var line = new ProgressBar.Line("#react", {
-  //   strokeWidth: 4,
-  //   easing: 'easeInOut',
-  //   duration: 5000,
-  //   color: '#01d5da',
-  //   trailColor: '#eee',
-  //   trailWidth: 4,
-  //   svgStyle: {
-  //     width: '100%',
-  //     height: '100%'
-  //   }
-  // });
-  // line.animate(0.1);
+  var line = new ProgressBar.Line("#react", {
+    strokeWidth: 4,
+    easing: 'easeInOut',
+    duration: 5000,
+    color: '#61dafb',
+    trailColor: '#eee',
+    trailWidth: 4,
+    svgStyle: {
+      width: '100%',
+      height: '100%'
+    }
+  });
+  line.animate(0.1);
+
+  var line = new ProgressBar.Line("#meteor", {
+    strokeWidth: 4,
+    easing: 'easeInOut',
+    duration: 5000,
+    color: '#61dafb',
+    trailColor: '#eee',
+    trailWidth: 4,
+    svgStyle: {
+      width: '100%',
+      height: '100%'
+    }
+  });
+  line.animate(0.1);
+
+  var line = new ProgressBar.Line("#laravel", {
+    strokeWidth: 4,
+    easing: 'easeInOut',
+    duration: 5000,
+    color: '#61dafb',
+    trailColor: '#eee',
+    trailWidth: 4,
+    svgStyle: {
+      width: '100%',
+      height: '100%'
+    }
+  });
+  line.animate(0.1);
 
   var line = new ProgressBar.Line("#symfony", {
     strokeWidth: 4,
     easing: 'easeInOut',
     duration: 5000,
-    color: '#01d5da',
+    color: '#61dafb',
     trailColor: '#eee',
     trailWidth: 4,
     svgStyle: {
@@ -200,7 +228,7 @@ function showLines() {
     strokeWidth: 4,
     easing: 'easeInOut',
     duration: 5000,
-    color: '#01d5da',
+    color: '#61dafb',
     trailColor: '#eee',
     trailWidth: 4,
     svgStyle: {
@@ -214,7 +242,7 @@ function showLines() {
   //   strokeWidth: 4,
   //   easing: 'easeInOut',
   //   duration: 5000,
-  //   color: '#01d5da',
+  //   color: '#61dafb',
   //   trailColor: '#eee',
   //   trailWidth: 4,
   //   svgStyle: {
@@ -228,7 +256,7 @@ function showLines() {
     strokeWidth: 4,
     easing: 'easeInOut',
     duration: 5000,
-    color: '#01d5da',
+    color: '#61dafb',
     trailColor: '#eee',
     trailWidth: 4,
     svgStyle: {
@@ -242,7 +270,7 @@ function showLines() {
     strokeWidth: 4,
     easing: 'easeInOut',
     duration: 5000,
-    color: '#01d5da',
+    color: '#61dafb',
     trailColor: '#eee',
     trailWidth: 4,
     svgStyle: {
@@ -256,7 +284,7 @@ function showLines() {
     strokeWidth: 4,
     easing: 'easeInOut',
     duration: 5000,
-    color: '#01d5da',
+    color: '#61dafb',
     trailColor: '#eee',
     trailWidth: 4,
     svgStyle: {
@@ -270,7 +298,7 @@ function showLines() {
     strokeWidth: 4,
     easing: 'easeInOut',
     duration: 5000,
-    color: '#01d5da',
+    color: '#61dafb',
     trailColor: '#eee',
     trailWidth: 4,
     svgStyle: {
@@ -284,7 +312,7 @@ function showLines() {
     strokeWidth: 4,
     easing: 'easeInOut',
     duration: 5000,
-    color: '#01d5da',
+    color: '#61dafb',
     trailColor: '#eee',
     trailWidth: 4,
     svgStyle: {

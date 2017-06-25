@@ -15,7 +15,7 @@ body {
   font-size: 1.6rem;
   font-family: "Rajdhani", sans-serif;
   color: #fff;
-  background-color: #343943;
+  background-color: #000;
 }
 
 a {
@@ -94,7 +94,7 @@ Navigation
   right: -4px;
   height: 100%;
   width: 4px;
-  background-color: #01d5da;
+  background-color: #61dafb;
   opacity: 0;
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
@@ -102,59 +102,59 @@ Navigation
   pointer-events: none;
 }
 .no-touch .cd-side-navigation a:hover {
-  background-color: #001515;
+  background-color: #132b32;
 }
 .no-touch .cd-side-navigation a:hover::after {
   opacity: 1;
 }
 .cd-side-navigation a.selected, .no-touch .cd-side-navigation a.selected:hover {
   background-color: #000000;
-  color: #01d5da;
+  color: #61dafb;
 }
 .cd-side-navigation a.selected > svg *, .no-touch .cd-side-navigation a.selected:hover > svg * {
-  stroke: #01d5da;
+  stroke: #61dafb;
 }
 .cd-side-navigation li:nth-of-type(2) .selected > svg *,
 .cd-side-navigation li:nth-of-type(2) .selected:hover > svg * {
-  stroke: #01d5da;
+  stroke: #61dafb;
 }
 .cd-side-navigation li:nth-of-type(3) .selected > svg *,
 .cd-side-navigation li:nth-of-type(3) .selected:hover > svg * {
-  stroke: #01d5da;
+  stroke: #61dafb;
 }
 .cd-side-navigation li:nth-of-type(4) .selected > svg *,
 .cd-side-navigation li:nth-of-type(4) .selected:hover > svg * {
-  stroke: #01d5da;
+  stroke: #61dafb;
 }
 .cd-side-navigation li:nth-of-type(5) .selected > svg *,
 .cd-side-navigation li:nth-of-type(5) .selected:hover > svg * {
-  stroke: #01d5da;
+  stroke: #61dafb;
 }
 .cd-side-navigation li:nth-of-type(6) .selected > svg *,
 .cd-side-navigation li:nth-of-type(6) .selected:hover > svg * {
-  stroke: #01d5da;
+  stroke: #61dafb;
 }
 .cd-side-navigation li:nth-of-type(7) .selected > svg *,
 .cd-side-navigation li:nth-of-type(7) .selected:hover > svg * {
-  stroke: #01d5da;
+  stroke: #61dafb;
 }
 .cd-side-navigation li:nth-of-type(2) a::after {
-  background-color: #01d5da;
+  background-color: #61dafb;
 }
 .cd-side-navigation li:nth-of-type(3) a::after {
-  background-color: #01d5da;
+  background-color: #61dafb;
 }
 .cd-side-navigation li:nth-of-type(4) a::after {
-  background-color: #01d5da;
+  background-color: #61dafb;
 }
 .cd-side-navigation li:nth-of-type(5) a::after {
-  background-color: #01d5da;
+  background-color: #61dafb;
 }
 .cd-side-navigation li:nth-of-type(6) a::after {
-  background-color: #01d5da;
+  background-color: #61dafb;
 }
 .cd-side-navigation li:nth-of-type(7) a::after {
-  background-color: #01d5da;
+  background-color: #61dafb;
 }
 @media only screen and (min-width: 480px) {
   .cd-side-navigation {
@@ -396,7 +396,7 @@ Navigation
   background-color: #000;
 }
 .cd-content p {
-  width: 90%;
+  width: 100%;
   max-width: 800px;
   margin: 0;
   font-size: 1.4rem;
@@ -433,19 +433,19 @@ Navigation
   transform: translateZ(0);
 }
 #cd-loading-bar.index {
-  background-color: #01d5da;
+  background-color: #61dafb;
 }
 #cd-loading-bar.portfolio {
-  background-color: #01d5da;
+  background-color: #61dafb;
 }
 #cd-loading-bar.skills {
-  background-color: #01d5da;
+  background-color: #61dafb;
 }
 #cd-loading-bar.journey {
-  background-color: #01d5da;
+  background-color: #61dafb;
 }
 #cd-loading-bar.interests {
-  background-color: #01d5da;
+  background-color: #61dafb;
 }
 #cd-loading-bar.loading {
   visibility: visible;

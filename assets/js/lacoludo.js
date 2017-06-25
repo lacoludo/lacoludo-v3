@@ -1,8 +1,8 @@
 function launchAnimations(){
-  if (window.location.href.endsWith("journey.html")) {
-    showTimeline();
-  }
-  else if (window.location.href.endsWith("skills.html")) {
+  // if (window.location.href.endsWith("portfolio.html")) {
+  //   showFilters();
+  // }
+  if (window.location.href.endsWith("skills.html")) {
     showLines();
 
     $('.devicon').hover(
@@ -14,9 +14,9 @@ function launchAnimations(){
       }
     )
   }
-  // else if (window.location.href.endsWith("accomplishments.html")) {
-  //   showLines();
-  // }
+  else if (window.location.href.endsWith("journey.html")) {
+    showTimeline();
+  }
 }
 
 jQuery(document).ready(function($) {

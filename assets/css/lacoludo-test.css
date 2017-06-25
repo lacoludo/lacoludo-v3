@@ -38,21 +38,6 @@
 
 @media screen and (max-width: 768px) {
   .line {
-    margin-top: -28px;
+    margin-top: 5px;
   }
-}
-
-.popover {
-  background-color: inherit;
-  border: 1px solid #ccc;
-  border-radius: 0;
-  font-family: "Rajdhani", sans-serif;
-}
-
-.popover-title {
-  background-color: #191919;
-}
-
-.popover-content {
-  background-color: #191919;
 }
