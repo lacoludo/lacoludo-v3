@@ -1,7 +1,4 @@
 function launchAnimations(){
-  // if (window.location.href.endsWith("portfolio.html")) {
-  //   showFilters();
-  // }
   if (window.location.href.endsWith("skills.html")) {
     showLines();
 
@@ -16,6 +13,9 @@ function launchAnimations(){
   }
   else if (window.location.href.endsWith("journey.html")) {
     showTimeline();
+  }
+  else if (window.location.href.endsWith("portfolio.html")) {
+    initPhotoSwipeFromDOM('.my-gallery');
   }
 }
 

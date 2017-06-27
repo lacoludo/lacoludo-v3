@@ -95,6 +95,39 @@
   <script src="assets/js/modernizr.custom.min.js"></script>
   <!-- END : MODERNIZR -->
 
+  <!-- Core CSS file -->
+  <link rel="stylesheet" href="assets/bower_components/photoswipe/dist/photoswipe.css">
+
+  <!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+       In the folder of skin CSS file there are also:
+       - .png and .svg icons sprite,
+       - preloader.gif (for browsers that do not support CSS animations) -->
+  <link rel="stylesheet" href="assets/bower_components/photoswipe/dist/default-skin/default-skin.css">
+
+  <style>
+    .my-gallery {
+      width: 100%;
+      float: left;
+    }
+
+    .my-gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    .my-gallery figure {
+      display: block;
+      float: left;
+      margin: 0 5px 5px 0;
+      width: 150px;
+    }
+
+    .my-gallery figcaption {
+      display: none;
+    }
+  </style>
+
+
 </head>
 
 <body>
@@ -209,10 +242,17 @@
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js" integrity="sha256-VupM2GVVXK2c3Smq5LxXjUHBZveWTs35hu1al6ss6kk=" crossorigin="anonymous"></script> -->
   <!-- END : PROGRESSBAR.JS -->
 
+  <!-- Core JS file -->
+  <script src="assets/bower_components/photoswipe/dist/photoswipe.min.js"></script>
+
+  <!-- UI JS file -->
+  <script src="assets/bower_components/photoswipe/dist/photoswipe-ui-default.min.js"></script>
+
   <!-- LACOLUDO JS -->
   <script src="assets/js/line.min.js"></script>
   <script src="assets/js/timeline.min.js"></script>
   <script src="assets/js/lacoludo.min.js"></script>
+  <script src="assets/js/gallery.min.js"></script>
   <!-- END : LACOLUDO JS -->
 
 </body>
