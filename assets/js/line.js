@@ -1,5 +1,5 @@
 function showLines() {
-  
+
   var line = new ProgressBar.Line("#html", {
     strokeWidth: 4,
     easing: 'easeInOut',
@@ -112,7 +112,7 @@ function showLines() {
   });
   line.animate(0.6);
 
-  var line = new ProgressBar.Line("#nodejs", {
+  var line = new ProgressBar.Line("#node", {
     strokeWidth: 4,
     easing: 'easeInOut',
     duration: 5000,
@@ -182,6 +182,34 @@ function showLines() {
   });
   line.animate(0.1);
 
+  var line = new ProgressBar.Line("#backbone", {
+    strokeWidth: 4,
+    easing: 'easeInOut',
+    duration: 5000,
+    color: '#61dafb',
+    trailColor: '#eee',
+    trailWidth: 4,
+    svgStyle: {
+      width: '100%',
+      height: '100%'
+    }
+  });
+  line.animate(0.1);
+
+  var line = new ProgressBar.Line("#ember", {
+    strokeWidth: 4,
+    easing: 'easeInOut',
+    duration: 5000,
+    color: '#61dafb',
+    trailColor: '#eee',
+    trailWidth: 4,
+    svgStyle: {
+      width: '100%',
+      height: '100%'
+    }
+  });
+  line.animate(0.1);
+
   var line = new ProgressBar.Line("#meteor", {
     strokeWidth: 4,
     easing: 'easeInOut',
@@ -238,19 +266,19 @@ function showLines() {
   });
   line.animate(0.9);
 
-  // var line = new ProgressBar.Line("#typescript", {
-  //   strokeWidth: 4,
-  //   easing: 'easeInOut',
-  //   duration: 5000,
-  //   color: '#61dafb',
-  //   trailColor: '#eee',
-  //   trailWidth: 4,
-  //   svgStyle: {
-  //     width: '100%',
-  //     height: '100%'
-  //   }
-  // });
-  // line.animate(0.1);
+  var line = new ProgressBar.Line("#typescript", {
+    strokeWidth: 4,
+    easing: 'easeInOut',
+    duration: 5000,
+    color: '#61dafb',
+    trailColor: '#eee',
+    trailWidth: 4,
+    svgStyle: {
+      width: '100%',
+      height: '100%'
+    }
+  });
+  line.animate(0.1);
 
   var line = new ProgressBar.Line("#wordpress", {
     strokeWidth: 4,

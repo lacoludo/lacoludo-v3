@@ -14,9 +14,6 @@ function launchAnimations(){
   else if (window.location.href.endsWith("journey.html")) {
     showTimeline();
   }
-  else if (window.location.href.endsWith("portfolio.html")) {
-    initPhotoSwipeFromDOM('.my-gallery');
-  }
 }
 
 jQuery(document).ready(function($) {
