@@ -96,7 +96,7 @@ function showLines() {
       height: '100%'
     }
   });
-  line.animate(0.3);
+  line.animate(0.1);
 
   var line = new ProgressBar.Line("#angular", {
     strokeWidth: 4,
@@ -124,7 +124,7 @@ function showLines() {
       height: '100%'
     }
   });
-  line.animate(0.4);
+  line.animate(0.1);
 
   var line = new ProgressBar.Line("#bootstrap", {
     strokeWidth: 4,
@@ -138,7 +138,7 @@ function showLines() {
       height: '100%'
     }
   });
-  line.animate(1.0);
+  line.animate(0.9);
 
   var line = new ProgressBar.Line("#foundation", {
     strokeWidth: 4,
@@ -182,61 +182,61 @@ function showLines() {
   });
   line.animate(0.1);
 
-  var line = new ProgressBar.Line("#backbone", {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#61dafb',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-      width: '100%',
-      height: '100%'
-    }
-  });
-  line.animate(0.1);
+  // var line = new ProgressBar.Line("#backbone", {
+  //   strokeWidth: 4,
+  //   easing: 'easeInOut',
+  //   duration: 5000,
+  //   color: '#61dafb',
+  //   trailColor: '#eee',
+  //   trailWidth: 4,
+  //   svgStyle: {
+  //     width: '100%',
+  //     height: '100%'
+  //   }
+  // });
+  // line.animate(0.1);
 
-  var line = new ProgressBar.Line("#ember", {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#61dafb',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-      width: '100%',
-      height: '100%'
-    }
-  });
-  line.animate(0.1);
+  // var line = new ProgressBar.Line("#ember", {
+  //   strokeWidth: 4,
+  //   easing: 'easeInOut',
+  //   duration: 5000,
+  //   color: '#61dafb',
+  //   trailColor: '#eee',
+  //   trailWidth: 4,
+  //   svgStyle: {
+  //     width: '100%',
+  //     height: '100%'
+  //   }
+  // });
+  // line.animate(0.1);
 
-  var line = new ProgressBar.Line("#meteor", {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#61dafb',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-      width: '100%',
-      height: '100%'
-    }
-  });
-  line.animate(0.1);
+  // var line = new ProgressBar.Line("#meteor", {
+  //   strokeWidth: 4,
+  //   easing: 'easeInOut',
+  //   duration: 5000,
+  //   color: '#61dafb',
+  //   trailColor: '#eee',
+  //   trailWidth: 4,
+  //   svgStyle: {
+  //     width: '100%',
+  //     height: '100%'
+  //   }
+  // });
+  // line.animate(0.1);
 
-  var line = new ProgressBar.Line("#laravel", {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 5000,
-    color: '#61dafb',
-    trailColor: '#eee',
-    trailWidth: 4,
-    svgStyle: {
-      width: '100%',
-      height: '100%'
-    }
-  });
-  line.animate(0.1);
+  // var line = new ProgressBar.Line("#laravel", {
+  //   strokeWidth: 4,
+  //   easing: 'easeInOut',
+  //   duration: 5000,
+  //   color: '#61dafb',
+  //   trailColor: '#eee',
+  //   trailWidth: 4,
+  //   svgStyle: {
+  //     width: '100%',
+  //     height: '100%'
+  //   }
+  // });
+  // line.animate(0.1);
 
   var line = new ProgressBar.Line("#symfony", {
     strokeWidth: 4,
@@ -250,7 +250,7 @@ function showLines() {
       height: '100%'
     }
   });
-  line.animate(0.3);
+  line.animate(0.1);
 
   var line = new ProgressBar.Line("#sass", {
     strokeWidth: 4,
